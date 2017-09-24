@@ -1,12 +1,11 @@
 body{
   color: white;
-  background-color: #95a5a6;
+  background-color: #bcd4e0;
 }
 
 .header{
   width: 100%;
   margin: auto;
-  margin-top: 15%;
   text-align: center;
 }
 .panel-body{

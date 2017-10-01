@@ -5,13 +5,13 @@
 
     include("connexion.php");
 
-    $sql    =   $bdd  ->  query("SELECT id_user, login , password FROM User");
+    $sql    =   $bdd  ->  query("SELECT `Id_personne`,`Identifiant`,`mdp` FROM Connexion");
     $row    =   $sql  ->  fetch();
 
     extract($_POST);
-    if($row['login'] == $login && $row['password'] == $pass){
+    if($row['Identifiant'] == $login && $row['mdp'] == $pass){
 
-      $_SESSION['id_user'] = $row['id_user'];
+      $_SESSION['id_user'] = $row['Id_personne'];
       echo "log on";
 
     }else{

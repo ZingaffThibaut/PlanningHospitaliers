@@ -1,3 +1,11 @@
 .form-button{
   text-align: center;
 }
+
+.thead-default > tr > th{
+  text-align: center;
+}
+
+#date{
+  width: 5%;
+}

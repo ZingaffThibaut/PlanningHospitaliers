@@ -1,12 +1,10 @@
 $(function(){
 
   $("#form_login").submit(function(){
-
-    login = $(this).find("input[name=Login]").val();
-    pass = $(this).find("input[name=Password]").val();
-
+    login = document.getElementById("login").value;
+    pass = document.getElementById("password").value;
     $.post(
-      "php/identification.php",
+      "PHP/identification.php",
       {
         login: login,
         pass: pass

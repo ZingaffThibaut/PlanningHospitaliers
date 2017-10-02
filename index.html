@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- Bootstrap core CSS-->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom fonts for this template-->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Page level plugin CSS-->
+        <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+        <!-- Custom styles for this template-->
+        <link href="css/sb-admin.css" rel="stylesheet">
+        <title>Phika</title>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="js/Jquery/connexion.js"></script>
+    </head>
+    <body>
+      <div class="panel-body">
+          <form method="post" role="form" id="form_login" action='#'>
+            <h1>Connexion</h1>
+              <fieldset>
+                  <div class="form-group">
+                      <input class="form-control" placeholder="Login" name="login" id="login" type="text" autofocus>
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control" placeholder="Password" name="password" id="password" type="password" value="">
+                  </div>
+                  <input type="submit"  value="se connecter" />
+              </fieldset>
+          </form>
+          <hr>
+          <div id="ErrorIdentification"></div>
+      </div>
+    </body>
+</html>

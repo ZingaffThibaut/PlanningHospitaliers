@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.post(
-    "PHP/Nom.php",
+    "https://infodb.iutmetz.univ-lorraine.fr/~zingraff7u/Cordova/PHP/Nom.php",
     function(data){
       if(data!=""){
           $("#profil").html(data);

@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.post(
-    "php/utilisateurs.php",
+    "https://infodb.iutmetz.univ-lorraine.fr/~zingraff7u/Cordova/PHP/utilisateurs.php",
     {
       information: "true",
     },

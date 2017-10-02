@@ -1,7 +1,6 @@
-$("#Deco").click(
-  alert('test');
+function Supp(){
   $.post(
-    "PHP/suppconnextion.php",
+    "PHP/suppconnexion.php",
     function(data){
       alert(data);
       if(data=='ok'){
@@ -9,4 +8,4 @@ $("#Deco").click(
       }
     }
   );
-);
+};

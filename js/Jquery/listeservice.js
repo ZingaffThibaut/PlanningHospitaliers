@@ -1,9 +1,9 @@
 $(document).ready(function(){
   $.post(
-    "PHP/nom.php",
+    "PHP/listeservice.php",
     function(data){
       if(data!=""){
-          $("#profil").html(data);
+          $("#option").html(data);
       }
     }
   );

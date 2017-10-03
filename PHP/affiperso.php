@@ -38,7 +38,7 @@ if(isset($_POST)){
         <td>".$row['Nom']."</td>
         <td>".$row['Prenom']."</td>
         <td>
-        <a class='btn btn-success' href='#' role='button'><i class='fa fa-pencil '></i></a>
+        <a class='btn btn-success' href='modifpersonnel.html' role='button'><i class='fa fa-pencil '></i></a>
         <a class='btn btn-danger' href='#' role='button'><i class='fa fa-trash'></i></a>
         </td>
         </tr>";

@@ -78,17 +78,33 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <h1>Gestion du personnel</h1>
+            <h1>Modification d'une personne</h1>
+            <br>
             <form method="post" role="form" id="form_perso" action='#'>
-            <select class='form-control' id='option' name='service'>
-            </select>
+            <br>
+            <p>Nom:
+              <input type="text" name="nom"/>
+            </p>
+            <br>
+            <p>Prénom:
+              <input type="text" name="prenom"/>
+            </p>
+            <br>
+            <p>Service:
+              <select class='form-control' id='option' name='service'>
+              </select>
+            </p>
+            <br>
+            <p>Niveaux:
+              <select class='form-control' id="Niveaux">
+                <option value="1">Chef</option>
+                <option value="3">Aide</option>
+              </select>
+            </p>
             <br>
             <button type="submit"class="btn btn-success">Valider</button>
-            <button type="submit"formaction="ajoutpersonnel.html"class="btn btn-success">Ajout</button>
             </form>
             <hr>
-            <div id='tab'>
-            </div>
           </div>
         </div>
       </div>

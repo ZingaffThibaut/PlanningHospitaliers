@@ -23,6 +23,7 @@
   <script src="js/Jquery/affiperso.js"></script>
   <script src="js/Jquery/listeservice.js"></script>
   <script src="js/Jquery/listeniveau.js"></script>
+  <script src="js/Jquery/ajoutperso.js"></script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark">
@@ -81,18 +82,18 @@
           <div class="col-lg-12">
             <h1>Ajout d'une personne</h1>
             <br>
-            <form method="post" role="form" id="form_perso" action='#'>
+            <form method="post" role="form" id="form_ajout" action='#'>
             <br>
             <p>Nom:
-              <input class="form-control" type="text" name="nom"/>
+              <input class="form-control" type="text" id="nom"/>
             </p>
             <br>
             <p>Prénom:
-              <input class="form-control" type="text" name="prenom"/>
+              <input class="form-control" type="text" id="prenom"/>
             </p>
             <br>
             <p>Service:
-              <select class='form-control' id='option-service' name='service'>
+              <select class='form-control' id='option-service'>
               </select>
             </p>
             <br>
@@ -103,7 +104,7 @@
             <br>
             <button type="submit"class="btn btn-success">Valider</button>
             </form>
-            <hr>
+            <div id='ErrorIdentification' class='mt-3'>
           </div>
         </div>
       </div>

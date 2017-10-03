@@ -5,7 +5,7 @@ session_start();
 if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
-  if(isset($Id_service)){
+  if(isset($Id_service)&&$Id_service!='0'){
     $requete="SELECT Nom_service, Nom, Prenom
     FROM Personne, Service
     WHERE Service.Id_service = Personne.Id_service
@@ -44,8 +44,8 @@ if(isset($_POST)){
         </tr>";
       }
       $resultat.="</tbody>
-    </table>";
-    echo $resultat;
+      </table>";
+      echo $resultat;
     }else{
       echo "Liste vide";
     }

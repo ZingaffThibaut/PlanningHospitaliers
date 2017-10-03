@@ -1,7 +1,7 @@
 $(function(){
 
   $("#form_perso").submit(function(){
-    service = document.getElementById("service").value;
+    service = document.getElementById("option-service").value;
     $.post(
       "PHP/affiperso.php",
       {

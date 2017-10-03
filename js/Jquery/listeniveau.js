@@ -1,9 +1,9 @@
 $(document).ready(function(){
   $.post(
-    "PHP/listeservice.php",
+    "PHP/listeniveau.php",
     function(data){
       if(data!=""){
-          $("#option-service").html(data);
+          $("#option-niveau").html(data);
       }
     }
   );

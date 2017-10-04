@@ -6,13 +6,13 @@ if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
   if(isset($Id_service)&&$Id_service!='0'){
-    $requete="SELECT Nom_service, Nom, Prenom
+    $requete="SELECT Nom_service, Nom, Prenom, Id_personne
     FROM Personne, Service
     WHERE Service.Id_service = Personne.Id_service
     AND Service.Id_service ='".$Id_service."'
     ORDER BY Nom_service, Nom, Prenom";
   }else{
-    $requete="SELECT Nom_service, Nom, Prenom
+    $requete="SELECT Nom_service, Nom, Prenom, Id_personne
     FROM Personne, Service
     WHERE Service.Id_service = Personne.Id_service
     ORDER BY Nom_service, Nom, Prenom";
@@ -39,7 +39,8 @@ if(isset($_POST)){
         <td>".$row['Prenom']."</td>
         <td>
         <a class='btn btn-success' href='modifpersonnel.html' role='button'><i class='fa fa-pencil '></i></a>
-        <a class='btn btn-danger' href='#' role='button'><i class='fa fa-trash'></i></a>
+        <button onclick='Delete(".$row['Id_personne'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
+        </form>
         </td>
         </tr>";
       }

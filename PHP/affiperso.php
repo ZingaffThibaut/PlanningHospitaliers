@@ -38,7 +38,7 @@ if(isset($_POST)){
         <td>".$row['Nom']."</td>
         <td>".$row['Prenom']."</td>
         <td>
-        <a class='btn btn-success' href='modifpersonnel.html' role='button'><i class='fa fa-pencil '></i></a>
+        <button onclick='Modif(".$row['Id_personne'].")' class='btn btn-success'><i class='fa fa-pencil'></i></button>
         <button onclick='Delete(".$row['Id_personne'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
         </form>
         </td>

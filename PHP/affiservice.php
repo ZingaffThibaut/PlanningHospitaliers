@@ -8,7 +8,7 @@ if(isset($_POST)){
 
     $requete="SELECT Nom_service
     FROM Service
-    WHERE Id_dispo=0
+    WHERE Id_affi=0
     AND Id_service !=0
     ORDER BY Nom_service";
 

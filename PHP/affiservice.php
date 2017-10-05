@@ -8,6 +8,7 @@ if(isset($_POST)){
 
     $requete="SELECT Nom_service
     FROM Service
+    WHERE Id_service != 0;
     ORDER BY Nom_service";
 
   $result=$bdd->prepare($requete);

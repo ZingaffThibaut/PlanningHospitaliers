@@ -1,12 +1,12 @@
 function Delete(nb){
-    alert(nb);
+  var r = confirm("Confirmer la suppresion");
+  if (r == true) {
     $.post(
       "PHP/deleteperso.php",
       {
         Id_personne: nb
       },
       function(data){
-        alert(data);
         if (data == "ok"){
           window.location.href ='gestionnaire.html';
         } else {
@@ -16,5 +16,6 @@ function Delete(nb){
     );
 
     return false;
-  };
+  }
+};
 //https://infodb.iutmetz.univ-lorraine.fr/~zingraff7u/Cordova/more_com.php

@@ -24,7 +24,7 @@ if(empty($err[2])){
       <td>".$row['Nom_service']."</td>
       <td>
       <a class='btn btn-success' href='#' role='button'><i class='fa fa-pencil '></i></a>
-      <a class='btn btn-danger' href='#' role='button'><i class='fa fa-trash'></i></a>
+      <button onclick='Deleteservice(".$row['Id_service'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
       </td>
       </tr>";
     }

@@ -1,5 +1,5 @@
 $('#toggleNavColor').click(function() {
-  $('nav').toggleClass('navbar-dark navbar-light');
-  $('nav').toggleClass('bg-dark bg-light');
-  $('body').toggleClass('bg-dark bg-light');
+  $('nav').toggleClass('navbag-light navbar-dark');
+  $('nav').toggleClass('bg-light bg-dark');
+  $('body').toggleClass('bg-dg-light bg-dark');
 });

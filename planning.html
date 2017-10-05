@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="ZINGRAFF THIBAUT">
   <title>Phika</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,9 +19,9 @@
   <link href="css/custom.css" rel="stylesheet">
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark">
+<body class="fixed-nav bg-light">
   <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="accueil.html"><i class="fa fa-fw fa-hospital-o"></i>Phika</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,12 +34,6 @@
             <span class="nav-link-text">Acceuil</span>
           </a>
         </li>
-        <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-calendar"></i>
-            <span class="nav-link-text">Mon planning</span>
-          </a>
-        </li> -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Planning">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
@@ -71,7 +65,12 @@
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out" ></i> Logout</bouton>
-          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="toggleNavColor">
+            <i class="fa fa-fw fa-moon-o"></i><span id="nuit"></span>
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -85,30 +84,18 @@
         <div class="card-body">
           <table border class="table table-bordered table-hover table-sm text-center">
             <thead class="thead-default">
-              <tr id="membre">
-                <th width=5% id="#date"></th>
+              <tr id="date">
+                <th></th>
               </tr>
               <tr id="horraire">
                 <th></th>
               </tr>
             </thead>
-            <tbody id="date">
-              <tr id="etat">
-                <th>25/07/17</th>
-                <td class="bg-success">T</td>
-                <td class="bg-success">T</td>
-                <td class="bg-danger">RTT</td>
-                <td class="bg-danger">RTT</td>
-                <td class="bg-success">R<Ttd>
-                <td class="bg-success">T</td>
-                <td class="bg-success">T</td>
-                <td class="bg-danger">RTT</td>
-                <td class="bg-success">T</td>
-              </tr>
+            <tbody id="planning">
             </tbody>
           </table>
         </div>
-        <div class="card-footer small text-muted"> Mise a jour le : 03/10/2017 à 9h 22</div>
+        <div class="card-footer small text-muted"> Mise a jour le : 05/10/2017 à 11h 38</div>
       </div>
     </div>
   </div>
@@ -125,13 +112,14 @@
   <script src="js/sb-admin.min.js"></script>
   <!-- Custom scripts for this page-->
   <script src="js/sb-admin-datatables.min.js"></script>
+  <script src="js/Jquery/nuit.js"></script>
   <script src="js/Jquery/verifconnexion.js"></script>
   <script src="js/Jquery/suppconnexion.js"></script>
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/choixService.js"></script>
-  <script src="js/Jquery/planning/planning.js"></script>
-  <script src="js/Jquery/planning/horraire.js"></script>
   <script src="js/Jquery/planning/date.js"></script>
+  <script src="js/Jquery/planning/horraire.js"></script>
+  <script src="js/Jquery/planning/planning.js"></script>
   </div>
 </body>
 

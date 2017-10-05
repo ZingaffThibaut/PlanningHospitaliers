@@ -2,12 +2,8 @@
   include("../connexion.php");
 
   if(isset($_POST)){
-    $sql           =   $bdd  ->  query("SELECT Id_service FROM Service WHERE Nom_service = '".$_POST['service']."'");
-    $Id_service    =   $sql  ->  fetch();
-
-    $sql           =   $bdd  ->  query("SELECT Nom , Prenom FROM Personne WHERE Id_service = '".$Id_service[0]."'");
-
-    while($membre  =   $sql  ->  fetch()){
+    $sql         =   $bdd  ->  query("SELECT * FROM Date WHERE Date BETWEEN NOW( ) AND DATE_ADD( NOW( ) , INTERVAL 7 DAY )");
+    while ($date  =   $sql  ->  fetch()) {
        echo("<th>AM</th><th>PM</th><th>NG</th>");
     }
   }

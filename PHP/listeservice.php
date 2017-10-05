@@ -5,6 +5,7 @@ session_start();
 include("connexion.php");
 $requete="SELECT Id_service, Nom_service
 FROM Service
+WHERE Id_affi=0
 ORDER BY Nom_service";
 $result=$bdd->prepare($requete);
 $result->execute();

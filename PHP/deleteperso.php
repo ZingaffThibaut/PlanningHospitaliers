@@ -4,7 +4,7 @@ session_start();
 if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
-  $requete="DELETE FROM Personne WHERE Id_personne = '".$Id_personne."'";
+  $requete="UPDATE Personne SET Id_affi='0' WHERE Id_personne = '".$Id_personne."'";
   $result=$bdd->prepare($requete);
   $result->execute();
   $err = $result->errorInfo();

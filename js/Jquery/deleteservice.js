@@ -7,7 +7,7 @@ function Deleteserv(nb){
       },
       function(data){
         if (data == "ok"){
-          window.location.href ='affiservice.html';
+          window.location.href ='service.html';
         } else {
           $("#ErrorIdentification").html("<div class='alert alert-danger' role='alert'>Erreur dans la suppresion</div>");
         }

@@ -24,6 +24,8 @@ if(isset($_POST)){
   if(!empty($err[2])){
     echo $err[2];
     echo "Error";
+  }else{
+    echo "ok";
   }
 }
 ?>

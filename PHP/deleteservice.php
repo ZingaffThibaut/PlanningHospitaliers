@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
   $requete="UPDATE Service SET Id_affi='1' WHERE Id_service = '".$Id_service."'";
@@ -12,7 +11,6 @@ if(isset($_POST)){
     echo $err[2];
     echo "Error";
   }else{
-    echo 'ok';
-  }
-}
+      echo "ok";
+    }
 ?>

@@ -1,4 +1,4 @@
-function Deleteservice(nb){
+function Deleteserv(nb){
     var r = confirm("Confirmer la suppresion");
     $.post(
       "PHP/deleteservice.php",

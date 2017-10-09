@@ -10,11 +10,13 @@ if(isset($_POST)){
     FROM Personne, Service
     WHERE Service.Id_service = Personne.Id_service
     AND Service.Id_service ='".$Id_service."'
+    AND Personne.Id_affi=0
     ORDER BY Nom_service, Nom, Prenom";
   }else{
     $requete="SELECT Nom_service, Nom, Prenom, Id_personne
     FROM Personne, Service
     WHERE Service.Id_service = Personne.Id_service
+    AND Personne.Id_affi=0
     ORDER BY Nom_service, Nom, Prenom";
   }
   $result=$bdd->prepare($requete);

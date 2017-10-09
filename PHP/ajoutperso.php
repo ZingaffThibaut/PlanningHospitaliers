@@ -32,7 +32,7 @@ if(isset($_POST)){
       $nb = $row['nb'];
       $nb++;
     }
-  $requete="INSERT INTO Personne VALUE('".$nb."','".$Nom."','".$Prenom."','".$Id_service."')";
+  $requete="INSERT INTO Personne VALUE('".$nb."','".$Nom."','".$Prenom."','".$Id_service."','0')";
   $result=$bdd->prepare($requete);
   $result->execute();
   $err = $result->errorInfo();

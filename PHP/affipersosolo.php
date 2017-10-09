@@ -24,19 +24,19 @@ if(isset($_POST)){
       $res="<h1>Modification d'une personne</h1>
       <button class='btn' onclick='Retour()'>Retour</button>
       <br>
-      <form method='post' role='form' id='form_perso' action='#'>
+      <form method='post' role='form' id='modif_perso' action='#'>
       <br>
-      <input type='hidden' name='Id_personne' value='".$row['Id_personne']."'/>
+      <input type='hidden' id='Id_personne' value='".$row['Id_personne']."'/>
       <p>Nom:
-        <input class='form-control' type='text' name='nom' value='".$row['Nom']."'/>
+        <input class='form-control' type='text' id='nom' value='".$row['Nom']."'/>
       </p>
       <br>
       <p>Prénom:
-        <input class='form-control' type='text' name='prenom' value='".$row['Prenom']."'/>
+        <input class='form-control' type='text' id='prenom' value='".$row['Prenom']."'/>
       </p>
       <br>
       <p>Service:
-        <select class='form-control' id='option-service2' name='service'>
+        <select class='form-control' id='option-service2' >
         </select>
       </p>
       <br>
@@ -45,7 +45,7 @@ if(isset($_POST)){
         </select>
       </p>
       <br>
-      <button type='submit'class='btn btn-success'>Valider</button>
+      <button class='btn btn-success onclick='modif_perso()''>Valider</button>
       </form>
       <hr>£";
       $res.=$row['Id_service']."£";

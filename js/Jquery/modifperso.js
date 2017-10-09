@@ -42,4 +42,29 @@ function Retour(){
   $("#tabtotal").css("visibility", "visible");
   $("#tabtotal").css("display", "block");
 };
+
+function modif_perso(){
+    alert('test');
+    Id_personne = document.getElementById("Id_personne").value;
+    nom = document.getElementById("nom").value;
+    prenom = document.getElementById("prenom").value;
+    Service = document.getElementById("option-service2").value;
+    Niveau = document.getElementById("option-niveau").value;
+    $.post(
+      "PHP/modifperso.php",
+      {
+        Id_personne: Id_personne,
+        Nom: nom,
+        Prenom: prenom,
+        Service: Service,
+        Niveau: Niveau
+      },
+      function(data){
+        alert(data);
+      }
+    );
+
+    return false;
+  };
+
 //https://infodb.iutmetz.univ-lorraine.fr/~zingraff7u/Cordova/more_com.php

@@ -4,7 +4,7 @@ session_start();
 if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
-  $requete="SELECT Connexion.Id_personne, Id_lvl, Nom FROM Connexion, Personne WHERE Identifiant='".$login."' AND mdp='".$pass."' AND Connexion.Id_personne = Personne.Id_personne ";
+  $requete="SELECT Connexion.Id_personne, Id_lvl, Nom FROM Connexion, Personne WHERE Identifiant='".$login."' AND mdp='".$pass."' AND Connexion.Id_personne = Personne.Id_personne AND Personne.Id_affi = 0 ";
   $result=$bdd->prepare($requete);
   $result->execute();
   $err = $result->errorInfo();

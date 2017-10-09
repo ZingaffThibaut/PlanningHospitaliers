@@ -45,7 +45,7 @@ if(isset($_POST)){
         </select>
       </p>
       <br>
-      <button class='btn btn-success onclick='modif_perso()''>Valider</button>
+      <button class='btn btn-success' onclick='modif_perso()'>Valider</button>
       </form>
       <hr>£";
       $res.=$row['Id_service']."£";

@@ -44,7 +44,6 @@ function Retour(){
 };
 
 function modif_perso(){
-    alert('test');
     Id_personne = document.getElementById("Id_personne").value;
     nom = document.getElementById("nom").value;
     prenom = document.getElementById("prenom").value;

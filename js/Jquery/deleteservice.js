@@ -6,7 +6,6 @@ function Deleteserv(nb){
         Id_service: nb
       },
       function(data){
-        alert(data);
         if (data == "ok"){
           window.location.href ='affiservice.html';
         } else {

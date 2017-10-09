@@ -30,7 +30,7 @@ if(isset($_POST)){
         <th scope='row'>".$row['Nom_service']."</th>
         <td>
         <a class='btn btn-success' href='modifservice.html' role='button'><i class='fa fa-pencil '></i></a>
-        <button onclick='Deleteservice(".$row['Id_service'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
+        <button onclick='Deleteserv(".$row['Id_service'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
         </form>
         </td>
         </tr>";

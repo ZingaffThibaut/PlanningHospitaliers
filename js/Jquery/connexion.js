@@ -4,7 +4,7 @@ $(function(){
     login = document.getElementById("login").value;
     pass = document.getElementById("password").value;
     $.post(
-      "https://infodb.iutmetz.univ-lorraine.fr/~zingraff7u/Cordova/PHP/identification.php",
+      "https://infodb.iutmetz.univ-lorraine.fr/~nunge1u/LP/PlanningHospitaliers/PHP/identification.php",
       {
         login: login,
         pass: pass

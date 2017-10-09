@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.post(
-    "https://infodb.iutmetz.univ-lorraine.fr/~zingraff7u/Cordova/PHP/utilisateurs.php",
+    "https://infodb.iutmetz.univ-lorraine.fr/~nunge1u/LP/PlanningHospitaliers/PHP/utilisateurs.php",
     {
       information: "true",
     },

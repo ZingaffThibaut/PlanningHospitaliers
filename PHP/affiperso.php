@@ -48,9 +48,6 @@ if(isset($_POST)){
       echo "Error";
     }
   }else{
-    echo "Que faites vous ici ?";
-  }
-  }else{
     $requete="SELECT Nom_service, Nom, Prenom, Id_personne
     FROM Personne, Service
     WHERE Service.Id_service = Personne.Id_service
@@ -93,9 +90,8 @@ if(isset($_POST)){
       echo $err[2];
       echo "Error";
     }
-  }else{
-    echo "Que faites vous ici ?";
   }
-  }
-
-?>
+}else{
+  echo'Error';
+}
+  ?>

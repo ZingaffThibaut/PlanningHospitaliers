@@ -6,7 +6,7 @@ if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
 
-    $requete="SELECT Nom_service
+    $requete="SELECT Nom_service, Id_service
     FROM Service
     WHERE Id_affi=0
     AND Id_service !=0
@@ -29,7 +29,7 @@ if(isset($_POST)){
         $resultat.="<tr>
         <th scope='row'>".$row['Nom_service']."</th>
         <td>
-        <a class='btn btn-success' href='modifservice.html' role='button'><i class='fa fa-pencil '></i></a>
+        <button onclick='Modif(".$row['Id_service'].")' class='btn btn-success'><i class='fa fa-pencil'></i></button>
         <button onclick='Deleteservice(".$row['Id_service'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
         </form>
         </td>

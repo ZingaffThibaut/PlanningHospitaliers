@@ -8,7 +8,7 @@ $(function(){
         Nom_service: Nom_service
       },
       function(data){
-        if (data == "ok"){:
+        if (data == "ok"){
           window.location.href ='affiservice.html';
         } else {
           $("#ErrorIdentification").html("<div class='alert alert-danger' role='alert'>Erreur dans l'ajout</div>");

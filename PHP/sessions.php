@@ -8,6 +8,7 @@ if(isset($_POST)){
     $requete="SELECT Nom, Prenom, Identifiant, mdp, Id_personne
     FROM Personne, Service, Connexion
     WHERE Service.Id_service = Personne.Id_service
+    AND connexion.Id_personne = Personne.Id_personne
     AND Service.Id_service ='".$Id_service."'
     AND Personne.Id_affi=0
     ORDER BY Nom, Prenom";
@@ -53,6 +54,7 @@ if(isset($_POST)){
     $requete="SELECT Nom_service, Nom, Prenom, Id_personne, Identifiant, mdp
     FROM Personne, Service, Connexion
     WHERE Service.Id_service = Personne.Id_service
+    AND connexion.Id_personne = Personne.Id_personne
     AND Personne.Id_affi=0
     ORDER BY Nom_service, Nom, Prenom";
     $result=$bdd->prepare($requete);

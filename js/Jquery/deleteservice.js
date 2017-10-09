@@ -1,4 +1,4 @@
-function Deleteservice(nb){
+function Deleteserv(nb){
     var r = confirm("Confirmer la suppresion");
     $.post(
       "PHP/deleteservice.php",
@@ -6,7 +6,6 @@ function Deleteservice(nb){
         Id_service: nb
       },
       function(data){
-        alert(data);
         if (data == "ok"){
           window.location.href ='affiservice.html';
         } else {

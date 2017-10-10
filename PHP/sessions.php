@@ -5,10 +5,10 @@ if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
   if(isset($Id_service)&&$Id_service!='0'){
-    $requete="SELECT Nom, Prenom, Identifiant, mdp, Id_personne
+    $requete="SELECT Nom, Prenom, Identifiant, mdp, Personne.Id_personne
     FROM Personne, Service, Connexion
     WHERE Service.Id_service = Personne.Id_service
-    AND connexion.Id_personne = Personne.Id_personne
+    AND Connexion.Id_personne = Personne.Id_personne
     AND Service.Id_service ='".$Id_service."'
     AND Personne.Id_affi=0
     ORDER BY Nom, Prenom";
@@ -22,6 +22,7 @@ if(isset($_POST)){
     <th>Prénom</th>
     <th>Identifiant</th>
     <th>MDP</th>
+    <th>Action</th>
     </tr>
     </thead>
     <tbody>";
@@ -51,10 +52,10 @@ if(isset($_POST)){
       echo "Error";
     }
   }else{
-    $requete="SELECT Nom_service, Nom, Prenom, Id_personne, Identifiant, mdp
+    $requete="SELECT Nom_service, Nom, Prenom, Personne.Id_personne, Identifiant, mdp
     FROM Personne, Service, Connexion
     WHERE Service.Id_service = Personne.Id_service
-    AND connexion.Id_personne = Personne.Id_personne
+    AND Connexion.Id_personne = Personne.Id_personne
     AND Personne.Id_affi=0
     ORDER BY Nom_service, Nom, Prenom";
     $result=$bdd->prepare($requete);
@@ -68,6 +69,7 @@ if(isset($_POST)){
     <th>Prénom</th>
     <th>Identifiant</th>
     <th>MDP</th>
+    <th>Action</th>
     </tr>
     </thead>
     <tbody>";

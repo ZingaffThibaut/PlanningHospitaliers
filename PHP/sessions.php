@@ -36,7 +36,6 @@ if(isset($_POST)){
           <td>".$row['mdp']."</td>
           <td>
           <button onclick='Modif(".$row['Id_personne'].")' class='btn btn-success'><i class='fa fa-pencil'></i></button>
-          <button onclick='Delete(".$row['Id_personne'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
           </form>
           </td>
           </tr>";
@@ -84,7 +83,6 @@ if(isset($_POST)){
           <td>".$row['mdp']."</td>
           <td>
           <button onclick='Modif(".$row['Id_personne'].")' class='btn btn-success'><i class='fa fa-pencil'></i></button>
-          <button onclick='Delete(".$row['Id_personne'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
           </form>
           </td>
           </tr>";

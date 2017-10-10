@@ -30,7 +30,7 @@ if(isset($_POST)){
       </p>
       <br>
       <p>Prénom:
-        <input class='form-control' type='text' id='mdp' value='".$row['mdp']."'/>
+        <input class='form-control' type='password' id='mdp' value='".$row['mdp']."'/>
       </p>
       <br>
       <button class='btn btn-success' onclick='modif_session()'>Valider</button>

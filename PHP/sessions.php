@@ -21,7 +21,6 @@ if(isset($_POST)){
     <th>Nom</th>
     <th>Prénom</th>
     <th>Identifiant</th>
-    <th>MDP</th>
     <th>Action</th>
     </tr>
     </thead>
@@ -33,7 +32,6 @@ if(isset($_POST)){
           <th scope='row'>".$row['Nom']."</td>
           <td>".$row['Prenom']."</td>
           <td>".$row['Identifiant']."</td>
-          <td>".$row['mdp']."</td>
           <td>
           <button onclick='Modif(".$row['Id_personne'].")' class='btn btn-success'><i class='fa fa-pencil'></i></button>
           <button onclick='Delete(".$row['Id_personne'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>
@@ -68,7 +66,6 @@ if(isset($_POST)){
     <th>Nom</th>
     <th>Prénom</th>
     <th>Identifiant</th>
-    <th>MDP</th>
     <th>Action</th>
     </tr>
     </thead>
@@ -81,7 +78,6 @@ if(isset($_POST)){
           <td>".$row['Nom']."</td>
           <td>".$row['Prenom']."</td>
           <td>".$row['Identifiant']."</td>
-          <td>".$row['mdp']."</td>
           <td>
           <button onclick='Modif(".$row['Id_personne'].")' class='btn btn-success'><i class='fa fa-pencil'></i></button>
           <button onclick='Delete(".$row['Id_personne'].")' class='btn btn-danger'><i class='fa fa-trash'></i></button>

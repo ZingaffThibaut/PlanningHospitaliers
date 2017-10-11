@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $.post(
+    "PHP/affiprofil.php",
+    function(data){
+      if(data!=""){
+          $("#tab").html(data);
+      }
+    }
+  );
+});

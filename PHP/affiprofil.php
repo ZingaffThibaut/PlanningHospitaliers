@@ -23,20 +23,26 @@ if(isset($_POST)){
     while($row = $result->fetch()){
       $res="
       <input type='hidden' id='Id_personne' value='".$row['Id_personne']."'/>
-      <p>Nom: ".$row['Nom']."
-      </p>
+      <table class='table table-bordered table-hover table-responsive text-center'>
+      <tr>
+      <th scope='row'>Nom</th>
+      <td>".$row['Nom']."</td>
+      </tr>
+      <tr>
+      <th scope='row'>Prénom</th>
+      <td>".$row['Prenom']."</td>
+      </tr>
+      <tr>
+      <th scope='row'>Servie</th>
+      <td>".$row['Nom_service']."</td>
+      </tr>
+      <tr>
+      <th scope='row'>Identifiant</th>
+      <td>".$row['Identifiant']."</td>
+      </tr>
+      </table>
       <br>
-      <p>Prénom: ".$row['Prenom']."
-      </p>
-      <br>
-      <p>Service: ".$row['Nom_service']."
-      </p>
-      <br>
-      <p>Identifiant: ".$row['Identifiant']."
-      </p>
-      <br>
-      <p>Mot de passe: ".$row['mdp']."
-      </p>";
+      <hr>";
     }
     echo $res;
   }

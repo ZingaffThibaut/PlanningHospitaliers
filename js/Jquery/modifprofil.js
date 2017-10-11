@@ -23,15 +23,24 @@ function Retour(){
 function modif_profil(){
   mdp = document.getElementById("MDP").value;
   mdpv = document.getElementById("MDPV").value;
-  mdp = document.getElementById("mdp").value;
+  Id_personne = document.getElementById("Id_personne").value;
+  if(mdp!=mdpv){
+    $("#Error").html("<div class='alert alert-danger' role='alert'>Erreur mot de passe différent</div>");
+    return false;
+  }
   $.post(
     "PHP/modifprofil.php",
     {
+      Id_personne: Id_personne,
       mdp: mdp,
       mdpv: mdpv
     },
     function(data){
-      alert(data);
+      if(data=='ok'){
+        $("#Error").html("<div class='alert alert-success' role='alert'>Changement effectuer</div>");
+        document.getElementById("MDP").value = "";
+        document.getElementById("MDPV").value = "";
+      }
     }
   );
 

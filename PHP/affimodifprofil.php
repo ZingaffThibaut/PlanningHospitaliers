@@ -35,7 +35,9 @@ if(isset($_POST)){
         <input class='form-control' type='password' id='MDPV' value=''/>
       </p>
       <br>
-      <button class='btn btn-success' onclick='modif_profil()'>Valider</button>
+      <button class='btn btn-success' onclick='return modif_profil()'>Valider</button>
+      <br>
+      <div class='mt-3' id='Error'></div>
       </form>
       <hr>";
     }

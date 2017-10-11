@@ -28,7 +28,7 @@ if(isset($_POST)){
       if($result->rowCount()>0){
         while($row=$result->fetch()){
           $resultat.="<tr>
-          <th scope='row'>".$row['Nom']."</td>
+          <th scope='row'>".$row['Nom']."</th>
           <td>".$row['Prenom']."</td>
           <td>
           <button onclick='Modif(".$row['Id_personne'].")' class='btn btn-success'><i class='fa fa-pencil'></i></button>

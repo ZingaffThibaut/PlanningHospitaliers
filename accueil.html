@@ -19,9 +19,11 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/Jquery/verifconnexion.js"></script>
   <script src="js/Jquery/suppconnexion.js"></script>
+  <script src="js/Jquery/horloge.js"></script>
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/nuit.js"></script>
   <script src="js/Jquery/choixService.js"></script>
+
 </head>
 
 <body class="fixed-nav bg-light" onload="testnuit()">
@@ -71,6 +73,10 @@
             </a>
         </li>
       </ul>
+      <ul>
+        <div id="horloge" onload="horloge('horloge')">
+        </div>
+      </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
           <a class="nav-link text-center" id="sidenavToggler">
@@ -86,6 +92,7 @@
         </li>
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
+<<<<<<< HEAD
             <i class="fa fa-fw fa-sign-out"></i>Déconnexion</bouton>
         </li>
         <li class="nav-item">
@@ -96,6 +103,13 @@
       </ul>
     </div>
   </nav>
+=======
+            <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
+          </li>
+        </ul>
+      </div>
+    </nav>
+>>>>>>> 6619ec66d9f8fe8207474c31eaad34f718a6e532
 
   <div class="content-wrapper">
     <div class="container-fluid">

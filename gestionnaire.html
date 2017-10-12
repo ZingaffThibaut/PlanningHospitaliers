@@ -25,9 +25,10 @@
   <script src="js/Jquery/deleteperso.js"></script>
   <script src="js/Jquery/modifperso.js"></script>
   <script src="js/Jquery/ajoutperso.js"></script>
+  <script src="js/Jquery/nuit.js"></script>
 </head>
 
-<body class="fixed-nav sticky-footer bg-light">
+<body class="fixed-nav bg-light" onload="testnuit()">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="accueil.html"><i class="fa fa-fw fa-hospital-o"></i>O'Planning</a>
@@ -66,6 +67,11 @@
             <span class="nav-link-text">Sessions</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
+            <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+              <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
+            </a>
+          </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

@@ -33,7 +33,7 @@ if(isset($_POST)){
       <td>".$row['Prenom']."</td>
       </tr>
       <tr>
-      <th scope='row'>Servie</th>
+      <th scope='row'>Service</th>
       <td>".$row['Nom_service']."</td>
       </tr>
       <tr>

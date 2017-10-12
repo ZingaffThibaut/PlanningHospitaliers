@@ -22,9 +22,10 @@
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/affiperso.js"></script>
   <script src="js/Jquery/listeservice.js"></script>
+  <script src="js/Jquery/nuit.js"></script>
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark">
+<body class="fixed-nav bg-dark" onload="testnuit()">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="accueil.html"><i class="fa fa-fw fa-hospital-o"></i>O'Planning</a>
@@ -63,6 +64,11 @@
             <span class="nav-link-text">Sessions</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
+            <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+              <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
+            </a>
+          </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

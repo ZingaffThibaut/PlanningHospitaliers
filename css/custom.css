@@ -1,6 +1,29 @@
 .form-button{
   text-align: center;
 }
+
+
+.thead-default > tr > th{
+  text-align: center;
+}
+
+#date{
+  width: 5%;
+}
+
+.color-red{
+  color: #c0392b;
+  font-size: 50px;
+}
+
+.th-planning {
+  padding: 5px;
+}
+
+.th-planning-active{
+  color: #c0392b;
+  padding: 5px;
+}
 .hidden {
   display: none !important;
   visibility: hidden !important;

@@ -39,10 +39,12 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Planning">
-          <a class="nav-link" href="planning.html">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
-            <span class="nav-link-text">Mon planning</span>
+            <span class="nav-link-text">Le planning</span>
           </a>
+          <ul class="sidenav-second-level collapse" id="Service">
+          </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
           <a class="nav-link" href="gestionnaire.html">
@@ -76,7 +78,6 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-
         <li class="nav-item">
           <a class="nav-link" id="Profil" href="profil.html">
             <i class="fa fa-fw fa-user"></i> <span id="profil"></span>
@@ -85,6 +86,11 @@
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="toggleNavColor">
+              <i class="fa fa-fw fa-moon-o"></i><span id="nuit"></span>
+            </a>
           </li>
         </ul>
       </div>
@@ -112,8 +118,11 @@
     <script src="js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <script src="js/sb-admin-datatables.min.js"></script>
-
-
+    <script src="js/Jquery/nuit.js"></script>
+    <script src="js/Jquery/verifconnexion.js"></script>
+    <script src="js/Jquery/suppconnexion.js"></script>
+    <script src="js/Jquery/nom.js"></script>
+    <script src="js/Jquery/choixService.js"></script>
   </div>
 </body>
 

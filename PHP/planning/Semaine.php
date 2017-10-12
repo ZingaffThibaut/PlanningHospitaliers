@@ -9,6 +9,8 @@ session_start();
   //$date= new DateTime($annee."/".$mois."/01");
   $date = new DateTime("2017-10-01");
   $date->modify('first monday');
+  $date2 = new DateTime("2017-10-01");
+  $date2->modify('first monday');
   $lundi = $date->format('Y-m-d');
   $date->modify('+6 day');
   $dimanche = $date->format('Y-m-d');
@@ -30,7 +32,7 @@ session_start();
   ORDER BY Planning.Id_personne, Date, Id_periode";
 
 
-  $tabsemaine=['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
+  $tabsemaine=['','Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
 
   $result=$bdd->prepare($requete);
   $result->execute();
@@ -42,8 +44,8 @@ session_start();
       <tr>
       <td colspan='2'></td>";
       for($i=0;$i<=6;$i++){
-        $res.="<th colspan='3'>".$tabsemaine[$date->format('N')]."  ".$date->format('m/d')."</th>";
-        $date->modify('+1 day');
+        $res.="<th colspan='3'>".$tabsemaine[$date2->format('N')]."  ".$date2->format('m/d')."</th>";
+        $date2->modify('+1 day');
       }
       $res.="</tr><tr><td colspan='2'></td>";
       for($i=0;$i<=6;$i++){

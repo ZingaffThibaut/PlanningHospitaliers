@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .thead-default > tr > th{
   text-align: center;
 }
@@ -22,4 +23,8 @@
 .th-planning-active{
   color: #c0392b;
   padding: 5px;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
 }

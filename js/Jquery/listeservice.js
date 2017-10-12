@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $.post(
+    "PHP/listeservice.php",
+    function(data){
+      if(data!=""){
+          $("#option-service").html(data);
+      }
+    }
+  );
+});

@@ -22,9 +22,10 @@
   <script src="js/Jquery/suppconnexion.js"></script>
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/nuit.js"></script>
+  <script src="js/Jquery/planning/semaine.js"></script>
 </head>
 
-<body class="fixed-nav bg-light" onload="testnuit()">
+<body class="fixed-nav bg-light" onload="testnuit(); daynow();">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="accueil.html"><i class="fa fa-fw fa-hospital-o"></i>O'Planning</a>
@@ -66,10 +67,10 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
-            <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
-              <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
-            </a>
-          </li>
+          <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+            <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
+          </a>
+        </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -88,48 +89,24 @@
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
           </li>
-      </ul>
-    </div>
-  </nav>
+        </ul>
+      </div>
+    </nav>
 
-  <div class="content-wrapper">
-    <div class="container-fluid">
-      <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-fw fa-calendar"></i> Planning <i class="fa fa-arrow-right"></i> <span id="nomService"></span>
-        </div>
-        <div class="card-body">
-          <i class="fa fa-arrow-left" id="anneeMoins"></i> <span class="color-red" id="annee"></span> <i class="fa fa-arrow-right" id="anneePlus"></i>
-            <table id="mois">
-              <thead>
-                <tr>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                  <th class="th-planning"></th>
-                </tr>
-              </thead>
-            </table>
-          <table border class="table table-bordered table-hover table-sm text-center">
-            <thead class="thead-default">
-              <tr id="date">
-                <th></th>
-              </tr>
-              <tr id="horraire">
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="planning">
-            </tbody>
-          </table>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-fw fa-calendar"></i> Planning <i class="fa fa-arrow-right"></i> <span id="nomService"></span>
+          </div>
+          <div class="card-body">
+            <form>
+              <input class="form-control" id="Date" type="date" onload="daynow()" autofocus/>
+            </br>
+              <button type="submit"class="btn btn-primary" name="recherche">Recherche</button>
+            </form>
+          </div>
+          <div class="mt-4" id="tab">
         </div>
       </div>
     </div>
@@ -148,16 +125,12 @@
   <!-- Custom scripts for this page-->
   <script src="js/sb-admin-datatables.min.js"></script>
   <script src="js/Jquery/nuit.js"></script>
-  <script src="js/Jquery/verifconnexion.js"></script>@
+  <script src="js/Jquery/verifconnexion.js"></script>
   <script src="js/Jquery/suppconnexion.js"></script>
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/choixService.js"></script>
   <script src="js/Jquery/planning/date.js"></script>
-  <script src="js/Jquery/planning/horraire.js"></script>
-  <script src="js/Jquery/planning/planning.js"></script>`
-  <script src="js/Jquery/planning/modifDate.js"></script>
-`
-  </div>
+</div>
 </body>
 
 </html>

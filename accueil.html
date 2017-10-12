@@ -19,9 +19,11 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/Jquery/verifconnexion.js"></script>
   <script src="js/Jquery/suppconnexion.js"></script>
+  <script src="js/Jquery/horloge.js"></script>
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/nuit.js"></script>
   <script src="js/Jquery/choixService.js"></script>
+
 </head>
 
 <body class="fixed-nav bg-light" onload="testnuit()">
@@ -70,6 +72,10 @@
               <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
             </a>
           </li>
+      </ul>
+      <ul>
+        <div id="horloge" onload="horloge('horloge')">
+        </div>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

@@ -1,12 +1,48 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <link href="css/startlogo.css" rel="stylesheet">
-    <script src="js/Jquery/startlogo.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <!-- Bootstrap core CSS-->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom fonts for this template-->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- Page level plugin CSS-->
+        <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+        <!-- Custom styles for this template-->
+        <link href="css/sb-admin.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <title>O'Planning</title>
+    </head>
+    <body class="bg-dark">
+      <div class="container">
+        <div class="card card-login mx-auto mt-5">
+          <div class="card-header">Connexion</div>
+          <div class="card-body">
+            <form method="post" role="form" id="form_login" action='#'>
+                <fieldset>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Identifiant" name="login" id="login" type="text" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Mot de passe" name="password" id="password" type="password" value="">
+                    </div>
+                    <div class="form-button">
+                      <button type="submit"class="btn btn-primary" name="Connect">Se connecter</button>
+                      <hr>
+                      <div id="ErrorIdentification"></div>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="text-center">
+            <!-- <a class="d-block small mt-3" href="register.html">Créer un compte</a> -->
+            <!-- <a class="d-block small" href="forgot-password.html">Probléme pour se connecter</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <body>
-    <img src="img/logo.png" onload="startLogo()"/>
-  </body>
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="js/Jquery/connexion.js"></script>
+
+    </body>
 </html>

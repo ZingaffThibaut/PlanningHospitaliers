@@ -100,10 +100,9 @@
             <i class="fa fa-fw fa-calendar"></i> Planning <i class="fa fa-arrow-right"></i> <span id="nomService"></span>
           </div>
           <div class="card-body">
-            <form>
-              <input class="form-control" id="Date" type="date" onload="daynow()" autofocus/>
+            <form id="form_planning">
+              <input class="form-control" id="Date" type="date" onload="daynow()" onchange="Planningchar()" autofocus/>
             </br>
-              <button type="submit"class="btn btn-primary" name="recherche">Recherche</button>
             </form>
           </div>
           <div class="mt-4" id="tab">

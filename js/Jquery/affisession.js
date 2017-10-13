@@ -1,6 +1,4 @@
-$(function(){
-
-  $("#form_perso").submit(function(){
+function affisessionchar(){
     service = document.getElementById("option-service").value;
     $.post(
       "PHP/sessions.php",
@@ -11,10 +9,8 @@ $(function(){
           $("#tab").html(data);
       }
     );
+  };
 
-    return false;
-  });
-});
 
 $(document).ready(function(){
   $.post(

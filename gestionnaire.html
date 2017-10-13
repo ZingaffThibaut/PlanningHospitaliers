@@ -104,12 +104,9 @@
           <div class="col-lg-12">
             <div id="tabtotal">
               <h1>Gestion du personnel</h1>
-              <form method="post" role="form" id="form_perso" action='#'>
                 <label class='label'>Service</label>
-                <select class='form-control' id='option-service' name='service'>
+                <select class='form-control' id='option-service' onchange="affipersochar()" name='service'>
                 </select>
-                <br>
-                <button type="submit"class="btn btn-primary">Valider</button>
               </form>
               <hr>
               <a href="ajoutpersonnel.html" class="btn btn-success">Ajout</a>

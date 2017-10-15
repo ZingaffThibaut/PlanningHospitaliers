@@ -4,7 +4,7 @@ session_start();
 if(isset($_POST)){
   include("connexion.php");
   extract($_POST);
-  $requete="SELECT Connexion.Id_personne, Id_lvl, Nom FROM Connexion, Personne WHERE Identifiant='".$login."' AND mdp='".$pass."' AND Connexion.Id_personne = Personne.Id_personne AND Personne.Id_affi = 0 ";
+  $requete="SELECT Connexion.Id_personne, Nom_lvl, Nom FROM Connexion, Personne, Level WHERE Identifiant='".$login."' AND mdp='".$pass."' AND Connexion.Id_personne = Personne.Id_personne AND Connexion.Id_lvl = Level.Id_lvl AND Personne.Id_affi = 0 ";
   $result=$bdd->prepare($requete);
   $result->execute();
   $err = $result->errorInfo();
@@ -12,7 +12,7 @@ if(isset($_POST)){
     if($result->rowCount()>0){
       $row=$result->fetch();
       $_SESSION['Id_personne'] = $row['Id_personne'];
-      $_SESSION['acces'] = $row['Id_lvl'];
+      $_SESSION['acces'] = $row['Nom_lvl'];
       $_SESSION['Nom'] = $row['Nom'];
       echo "log on";
 

@@ -31,18 +31,29 @@
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="accueil.html"><i class="fa fa-fw fa-hospital-o"></i>O'Planning</a>
+    <div> <h1 id="div_horloge" onload="horloge('div_horloge')"></h1></div>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceuil">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Accueil">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-home"></i>
-            <span class="nav-link-text">Acceuil</span>
+            <span class="nav-link-text">Accueil</span>
           </a>
         </li>
+<<<<<<< HEAD
         <li class="nav-item" id="nav_planning" data-toggle="tooltip" data-placement="right" title="Planning">
+=======
+        <li class="nav-item" id="nav_planning_all" data-toggle="tooltip" data-placement="right" title="Planning">
+          <a class="nav-link" href="planning.html" >
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Le planning</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_planning_admin" data-toggle="tooltip" data-placement="right" title="Planning">
+>>>>>>> c070a62ee7d95a3fc941612353761c3e2a7182f0
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Le planning</span>
@@ -80,10 +91,6 @@
           </a>
         </li>
       </ul>
-      <ul>
-        <div id="horloge" onload="horloge('horloge')">
-        </div>
-      </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
           <a class="nav-link text-center" id="sidenavToggler">
@@ -100,6 +107,7 @@
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Déconnexion</bouton>
+<<<<<<< HEAD
         </li>
         <li class="nav-item">
           <a class="nav-link" id="toggleNavColor">
@@ -125,6 +133,26 @@
           <img src="img/logo.png" alt="logo">
         </div>
         <hr>
+=======
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <div class="row" style="text-align:center;">
+          <div class="col-lg-12">
+            <h1>Bienvenue</h1>
+            <p id="test">
+            </p>
+          </div>
+          <div class="col-lg-12 mt-5">
+            <img src="img/logo.png" alt="logo">
+          </div>
+          <hr>
+        </div>
+>>>>>>> c070a62ee7d95a3fc941612353761c3e2a7182f0
       </div>
     </div>
   </div>

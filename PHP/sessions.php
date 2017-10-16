@@ -15,7 +15,7 @@ if(isset($_POST)){
     $result=$bdd->prepare($requete);
     $result->execute();
     $err = $result->errorInfo();
-    $resultat="<table class='table table-bordered table-hover table-sm '>
+    $resultat="<table class='table table-bordered table-hover table-sm table-responsive'>
     <thead class='thead-default'>
     <tr>
     <th>Nom</th>

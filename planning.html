@@ -23,6 +23,7 @@
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/nuit.js"></script>
   <script src="js/Jquery/planning/semaine.js"></script>
+  <script src="js/Jquery/menuacces.js"></script>
 </head>
 
 <body class="fixed-nav bg-light" onload="testnuit(); daynow();">
@@ -34,13 +35,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="acceuil">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Accueil">
           <a class="nav-link" href="accueil.html">
             <i class="fa fa-fw fa-home"></i>
-            <span class="nav-link-text">Acceuil</span>
+            <span class="nav-link-text">Accueil</span>
           </a>
         </li>
-        <li class="nav-item" id="nav_planning" data-toggle="tooltip" data-placement="right" title="Planning">
+        <li class="nav-item" id="nav_planning_all" data-toggle="tooltip" data-placement="right" title="Planning">
+          <a class="nav-link" href="planning.html">
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Le planning</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_planning_admin" data-toggle="tooltip" data-placement="right" title="Planning">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Le planning</span>

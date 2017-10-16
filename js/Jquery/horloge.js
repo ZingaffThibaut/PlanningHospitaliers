@@ -1,5 +1,5 @@
-function horloge(el) {
-    if(typeof el=="string") { el = document.getElementById(el); }
+$(document).ready(function(){
+    el = document.getElementById('test');
     function actualiser() {
       var date = new Date();
       var str = date.getHours();
@@ -9,4 +9,4 @@ function horloge(el) {
     }
     actualiser();
     setInterval(actualiser,1000);
-  }
+  });

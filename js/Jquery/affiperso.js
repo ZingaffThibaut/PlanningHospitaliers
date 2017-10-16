@@ -1,6 +1,4 @@
-$(function(){
-
-  $("#form_perso").submit(function(){
+function affipersochar(){
     service = document.getElementById("option-service").value;
     $.post(
       "PHP/affiperso.php",
@@ -11,11 +9,8 @@ $(function(){
           $("#tab").html(data);
       }
     );
-
-    return false;
-  });
-});
-
+  };
+  
 $(document).ready(function(){
   $.post(
     "PHP/affiperso.php",

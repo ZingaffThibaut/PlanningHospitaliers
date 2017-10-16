@@ -66,10 +66,10 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
-            <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+          <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
               <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
             </a>
-          </li>
+        </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -86,8 +86,8 @@
         </li>
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
-          </li>
+            <i class="fa fa-fw fa-sign-out"></i>Déconnexion</bouton>
+        </li>
       </ul>
     </div>
   </nav>
@@ -96,11 +96,23 @@
     <div class="container-fluid">
       <div class="card mb-3">
         <div class="card-header">
-          <hr>
-          <input type="text" type="file">
+          <form method="post" role="form" action ="" id="uploadForm" enctype="multipart/form-data">
+            <div class="col-lg-3">
+              <label>Importer un planning CSV :</label>
+            </div>
+            <div class="col-lg-3">
+              <br>
+              <input id="uploadFile" name="uploadFile" type="file" class="form-control"/>
+            </div>
+            <div class="col-lg-3">
+              <br>
+              <input id="uploadSubmit" type="submit" value="Upload" class="form-control"/>
+            </div>
+          </form>
+          <!-- <div class="center" id="uploadStatus">No upload yet</div> -->
           <hr>
           <div class="corps">
-
+            <label>Data :</label>
           </div>
         </div>
       </div>
@@ -127,8 +139,8 @@
     <script src="js/Jquery/planning/horraire.js"></script>
     <script src="js/Jquery/planning/planning.js"></script>`
     <script src="js/Jquery/planning/modifDate.js"></script>
+    <script src="js/Jquery/importcsv.js"></script>
+  </div>
+</body>
 
-    </div>
-  </body>
-
-  </html>
+</html>

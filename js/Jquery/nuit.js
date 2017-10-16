@@ -27,6 +27,7 @@ function Nuit() {
     $('nav').toggleClass('navbar-light navbar-dark');
     $('nav').toggleClass('bg-light bg-dark');
     $('body').toggleClass('bg-light bg-dark');
+    $('.horloge').toggleClass('red');
     var x = getCookie('Nuit');
     if(x=='Nuit'){
       setCookie('Nuit','Jour');
@@ -39,6 +40,7 @@ function Nuitchange() {
     $('nav').toggleClass('navbar-light navbar-dark');
     $('nav').toggleClass('bg-light bg-dark');
     $('body').toggleClass('bg-light bg-dark');
+    $('.horloge').toggleClass('red');
 }
 
 function testnuit(){

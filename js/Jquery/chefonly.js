@@ -6,7 +6,7 @@
         el : "true"
       },
       function(data){
-        if (data != "Admin" || data != "Chef" ){
+        if (data != "Admin" && data != "Chef" ){
           window.location.href ='accueil.html';
         }
       }

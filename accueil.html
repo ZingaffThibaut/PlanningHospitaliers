@@ -37,13 +37,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceuil">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Accueil">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-home"></i>
-            <span class="nav-link-text">Acceuil</span>
+            <span class="nav-link-text">Accueil</span>
           </a>
         </li>
-        <li class="nav-item" id="nav_planning" data-toggle="tooltip" data-placement="right" title="Planning">
+        <li class="nav-item" id="nav_planning_all" data-toggle="tooltip" data-placement="right" title="Planning">
+          <a class="nav-link" href="planning.html" >
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Le planning</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_planning_admin" data-toggle="tooltip" data-placement="right" title="Planning">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Le planning</span>
@@ -51,7 +57,6 @@
           <ul class="sidenav-second-level collapse" id="Service">
           </ul>
         </li>
-        <li class="nav-item" id="nav_gestionnaire" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
           <a class="nav-link" href="gestionnaire.html">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Gestionnaire</span>
@@ -67,6 +72,12 @@
           <a class="nav-link" href="session.html">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Sessions</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Import">
+          <a class="nav-link" href="importcsv.html">
+            <i class="fa fa-fw fa-address-book"></i>
+            <span class="nav-link-text">ImportCSV</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
@@ -91,6 +102,7 @@
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Déconnexion</bouton>
+
           </li>
         </ul>
       </div>

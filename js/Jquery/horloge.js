@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    el = document.getElementById('test');
+    el = document.getElementById('horloge');
     function actualiser() {
       var date = new Date();
       var str = date.getHours();

@@ -39,7 +39,9 @@
   display: none !important;
   visibility: hidden !important;
 }
-
+.navbar-horloge{
+  padding-left: 50px;
+}
 .clock{
-    color: white;
+    color: #c0392b;
 }

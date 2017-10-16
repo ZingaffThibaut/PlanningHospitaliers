@@ -18,6 +18,17 @@
 
 .th-planning {
   padding: 5px;
+  font-size: 30px;
+  Font-Weight: Bold;
+}
+
+.th-planning:hover{
+  color: #c0392b;
+}
+.th-planning-inactive{
+  padding: 5px;
+  font-size: 30px;
+  Font-Weight: Bold;
 }
 
 .th-planning-active{

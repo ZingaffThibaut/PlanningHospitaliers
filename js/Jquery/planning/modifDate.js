@@ -12,21 +12,25 @@ $(document).ready(function(){
     annee=annee+1;
     $('#annee').html(annee);
   });
-  var mois = new Array("Jan", "Fev", "Mar", "Avr", "mai", "jui", "Jui", "Aou", "Sep", "Oct", "Nov", "Dec");
+
+  var mois = new Array("Jan", "Fev", "Mar", "Avr", "Mai", "Jui", "Jui", "Aou", "Sep", "Oct", "Nov", "Dec");
+  var moisNum = new Array("0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
 
   for(var i=1;i < 13;i++){
-    $('#mois > thead > tr > th:nth-child('+(i)+')').each(function(){
-      $(this).append("<h2>"+mois[i-1]+"</h2>");
+      $('#mois > thead > tr > th:nth-child('+(i)+')').each(function(){
+        $(this).append("<h2>"+mois[i-1]+"</h2>");
+        $('#mois > thead > tr > th:nth-child('+i+')').attr('class','th-planning-inactive');
+        $('#mois > thead > tr > th:nth-child('+i+')').attr('value',moisNum[i]);
     })
   };
-  $('#mois > thead > tr > th:nth-child('+(date.getMonth()+1)+')').attr('class','th-planning-active');
 
-  $(".th-planning").click(function(){
-    $(".th-planning-active").attr('class','th-planning');
+  $(".th-planning-inactive").click(function(){
+    $(".th-planning-active").attr('class','th-planning-inactive');
     $(this).attr('class','th-planning-active');
+    var moisSelected = $('.th-planning-active').html();
+
+    console.log(moisSelected.substr(4,3));
   });
 
-  var jour = date.getDay();
-  var actualise = "Mise à jour le "+jour+" "+mois[date.getMonth()]+" "+annee+" à "+date.getHours()+"h";
-  $('#actualise').append(actualise);
+  $('#mois > thead > tr > th:nth-child('+(date.getMonth()+1)+')').attr('class','th-planning-active');
 })

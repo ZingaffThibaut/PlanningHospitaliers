@@ -19,9 +19,12 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/Jquery/verifconnexion.js"></script>
   <script src="js/Jquery/suppconnexion.js"></script>
+  <script src="js/Jquery/horloge.js"></script>
   <script src="js/Jquery/nom.js"></script>
   <script src="js/Jquery/nuit.js"></script>
   <script src="js/Jquery/choixService.js"></script>
+  <script src="js/Jquery/menuacces.js"></script>
+
 </head>
 
 <body class="fixed-nav bg-light" onload="testnuit()">
@@ -39,7 +42,6 @@
             <span class="nav-link-text">Acceuil</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Planning">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Le planning</span>
@@ -47,29 +49,38 @@
           <ul class="sidenav-second-level collapse" id="Service">
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
           <a class="nav-link" href="gestionnaire.html">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Gestionnaire</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Services">
+        <li class="nav-item" id="nav_service" data-toggle="tooltip" data-placement="right" title="Services">
           <a class="nav-link" href="service.html">
             <i class="fa fa-fw fa-medkit"></i>
             <span class="nav-link-text">Services</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sessions">
+        <li class="nav-item" id="nav_session" data-toggle="tooltip" data-placement="right" title="Sessions">
           <a class="nav-link" href="session.html">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Sessions</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Import">
+          <a class="nav-link" href="importcsv.html">
+            <i class="fa fa-fw fa-address-book"></i>
+            <span class="nav-link-text">ImportCSV</span>
+          </a>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
-            <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
-              <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
-            </a>
-          </li>
+          <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+            <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <div id="horloge" onload="horloge('horloge')">
+        </div>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -86,23 +97,64 @@
         </li>
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="toggleNavColor">
+            <i class="fa fa-fw fa-sign-out"></i>Déconnexion</bouton>
+<<<<<<< HEAD
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="toggleNavColor">
               <i class="fa fa-fw fa-moon-o"></i><span id="nuit"></span>
             </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+            <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
+=======
+>>>>>>> 69748bab9251e87ba16a61e811f26ccb0f448da1
           </li>
         </ul>
       </div>
     </nav>
+<<<<<<< HEAD
 
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row" style="text-align:center;">
+        <div class="col-lg-12">
+          <h1>Bienvenue</h1>
+        </div>
+        <div class="col-lg-12">
+          <img src="img/logo.png" alt="logo">
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-3">
+          <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fa fa-fw fa-comments"></i>
+              </div>
+              <div class="mr-5">26 New Messages!</div>
+            </div>
+            <a class="card-footer text-white clearfix small z-1" href="#">
+                    <span class="float-left">View Details</span>
+                    <span class="float-right">
+                      <i class="fa fa-angle-right"></i>
+                    </span>
+                  </a>
+=======
     <div class="content-wrapper">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="text-align:center;">
           <div class="col-lg-12">
             <h1>Bienvenue</h1>
+>>>>>>> 69748bab9251e87ba16a61e811f26ccb0f448da1
           </div>
+          <div class="col-lg-12 mt-5">
+            <img src="img/logo.png" alt="logo">
+          </div>
+          <hr>
         </div>
       </div>
     </div>
@@ -125,6 +177,7 @@
     <script src="js/Jquery/nom.js"></script>
     <script src="js/Jquery/choixService.js"></script>
   </div>
+
 </body>
 
 </html>

@@ -26,7 +26,12 @@ function Retour(){
 function modif_session(){
   Id_personne = document.getElementById("Id_personne").value;
   Identifiant = document.getElementById("Identifiant").value;
-  mdp = document.getElementById("mdp").value;
+  mdp = document.getElementById("MDP").value;
+  mdpv = document.getElementById("MDPV").value;
+  if(mdp!=mdpv){
+    $("#Error").html("<div class='alert alert-danger' role='alert'>Erreur mot de passe différent</div>");
+    return false;
+  }
   $.post(
     "PHP/modifsession.php",
     {

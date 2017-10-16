@@ -26,6 +26,7 @@
   <script src="js/Jquery/affiservice.js"></script>
   <script src="js/Jquery/nuit.js"></script>
   <script src="js/Jquery/choixService.js"></script>
+  <script src="js/Jquery/adminonly.js"></script>
 </head>
 
 <body class="fixed-nav bg-light" onload="testnuit()">
@@ -43,7 +44,7 @@
             <span class="nav-link-text">Acceuil</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Planning">
+        <li class="nav-item" id="nav_planning" data-toggle="tooltip" data-placement="right" title="Planning">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Le planning</span>
@@ -51,19 +52,19 @@
           <ul class="sidenav-second-level collapse" id="Service">
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
+        <li class="nav-item" id="nav_gestionnaire" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
           <a class="nav-link" href="gestionnaire.html">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Gestionnaire</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Services">
+        <li class="nav-item" id="nav_service" data-toggle="tooltip" data-placement="right" title="Services">
           <a class="nav-link" href="service.html">
             <i class="fa fa-fw fa-medkit"></i>
             <span class="nav-link-text">Services</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sessions">
+        <li class="nav-item" id="nav_session" data-toggle="tooltip" data-placement="right" title="Sessions">
           <a class="nav-link" href="session.html">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Sessions</span>

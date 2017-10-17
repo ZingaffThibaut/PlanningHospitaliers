@@ -1,27 +1,30 @@
+// $("#Upload").click(function() {
+//   fichier = document.getElementById("uploadFile").value;
+//   $.post(
+//     "PHP/importcsv.php", {
+//       Files: new FormData(fichier),
+//     },
+//     function(data) {
+//       alert(data);
+//       $("#corps").append(data);
+//     },
+//   )
+// });
+
 $(document).ready(function(){
-  $("#uploadSubmit").submit(function(e){
+  $("#formUpload").submit(function(e){
     e.preventDefault();
     $.ajax({
-      url: "importcsv.php",
+      url: "PHP/importcsv.php",
       method: "POST",
       data: new FormData(this),
       contentType: false,
       cache: false,
       processData: false,
       success: function(data){
-        console.log(data);
+        alert(data);
+        $(".corps").append(data);
       },
-
     })
-    // $.post(
-    //   "PHP/importcsv.php",
-    //   {
-    //     file: new FormData(this),
-    //   },
-    //   function(data){
-    //     alert(data);
-    //     $("#corps").append(data);
-    //   },
-    // )
-  });
-});
+  })
+})

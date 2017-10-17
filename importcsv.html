@@ -96,17 +96,18 @@
     <div class="container-fluid">
       <div class="card mb-3">
         <div class="card-header">
-          <form method="post" role="form" action ="" id="uploadForm" enctype="multipart/form-data">
+          <div class="form-group">
             <div class="col-lg-3">
               <label>Importer un planning CSV :</label>
             </div>
-            <div class="col-lg-3">
-              <br>
-              <input id="uploadFile" name="uploadFile" type="file" class="form-control"/>
+          </div>
+          <form action="#" id="formUpload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" name="uploadFile" id="uploadFile" class="form-control" />
             </div>
-            <div class="col-lg-3">
+            <div class="form-group">
               <br>
-              <input id="uploadSubmit" type="submit" value="Upload" class="form-control"/>
+              <input type="submit" id="Upload" class="form-control" value="Upload"/>
             </div>
           </form>
           <!-- <div class="center" id="uploadStatus">No upload yet</div> -->
@@ -137,7 +138,7 @@
     <script src="js/Jquery/choixService.js"></script>
     <script src="js/Jquery/planning/date.js"></script>
     <script src="js/Jquery/planning/horraire.js"></script>
-    <script src="js/Jquery/planning/planning.js"></script>`
+    <script src="js/Jquery/planning/planning.js"></script>
     <script src="js/Jquery/planning/modifDate.js"></script>
     <script src="js/Jquery/importcsv.js"></script>
   </div>

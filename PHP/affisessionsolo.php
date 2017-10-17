@@ -25,14 +25,14 @@ if(isset($_POST)){
       <form method='post' role='form' id='modif_session' action='#'>
       <br>
       <input type='hidden' id='Id_personne' value='".$row['Id_personne']."'/>
-      <p>Identifiant:
+      <p>Identifiant
         <input class='form-control' type='text' id='Identifiant' value='".$row['Identifiant']."'/>
       </p>
       <br>
-      <p>Mot de passe:
+      <p>Mot de passe
         <input class='form-control' type='password' id='mdp' value='".$row['mdp']."'/>
       </p>
-      <p>Vérification du mot de passe:
+      <p>Vérification du mot de passe
         <input class='form-control' type='password' id='mdp' value='".$row['mdpv']."'/>
       </p>
       <br>

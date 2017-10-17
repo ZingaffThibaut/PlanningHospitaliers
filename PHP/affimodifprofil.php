@@ -27,11 +27,11 @@ if(isset($_POST)){
       <form method='post' role='form' id='modif_session' action='#'>
       <br>
       <input type='hidden' id='Id_personne' value='$Idpers'/>
-      <p>Mot de passe:
+      <p>Mot de passe
         <input class='form-control' type='password' id='MDP' value=''/>
       </p>
       <br>
-      <p>Verification mot de passe:
+      <p>Verification mot de passe
         <input class='form-control' type='password' id='MDPV' value=''/>
       </p>
       <br>

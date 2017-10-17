@@ -27,20 +27,20 @@ if(isset($_POST)){
       <form method='post' role='form' id='modif_perso' action='#'>
       <br>
       <input type='hidden' id='Id_personne' value='".$row['Id_personne']."'/>
-      <p>Nom:
+      <p>Nom
         <input class='form-control' type='text' id='nom' value='".$row['Nom']."'/>
       </p>
       <br>
-      <p>Prénom:
+      <p>Prénom
         <input class='form-control' type='text' id='prenom' value='".$row['Prenom']."'/>
       </p>
       <br>
-      <p>Service:
+      <p>Service
         <select class='form-control' id='option-service2' >
         </select>
       </p>
       <br>
-      <p>Niveau:
+      <p>Niveau
         <select class='form-control' id='option-niveau'>
         </select>
       </p>

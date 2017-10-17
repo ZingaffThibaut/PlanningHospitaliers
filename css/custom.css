@@ -40,7 +40,8 @@
   visibility: hidden !important;
 }
 .navbar-horloge{
-  padding-left: 50px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 .clock{
     color: #c0392b;

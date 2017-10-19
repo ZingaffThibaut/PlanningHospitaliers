@@ -78,7 +78,7 @@ function Planningchar(){
       }
     }
   );
-}
+};
 
 
 
@@ -87,4 +87,8 @@ function daynow(){
   var date = new Date();
   var affi= "";
   document.getElementById('Date').value = affi.concat(date.getFullYear(),"-",date.getMonth()+1,"-",date.getDate());
+};
+
+function selectcolor(el) {
+    el.classList.toggle("bg-primary");
 }

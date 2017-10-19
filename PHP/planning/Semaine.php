@@ -21,26 +21,23 @@ if(isset($_POST)){
 
     $requete="
     SELECT
-    Planning.Id_personne,
-    Date,
+    Id_personne,
     Nom,
     Prenom,
-    Id_periode,
-    Nom_dispo
-    FROM Planning,
+    Id_jour
+    FROM
     Personne,
-    Disponibilite
-    WHERE Planning.Id_service='".$Id_service."'
-    AND (Date BETWEEN '".$lundi."' AND '".$dimanche."')
-    AND Planning.Id_personne = Personne.Id_personne
-    AND Planning.Id_dispo = Disponibilite.Id_dispo
-    ORDER BY Planning.Id_personne,Id_periode, Date";
+    Service
+    WHERE Personne.Id_service='".$Id_service."'
+    AND Personne.Id_service = Service.Id_service
+    ORDER BY Id_personne";
 
     $tabsemaine=['','L','M','Me','J','V','S','D'];
 
     $result=$bdd->prepare($requete);
     $result->execute();
     $err = $result->errorInfo();
+
     if(empty($err[2])){
       if($result->rowCount()>0){
         $res="<table class='table table-bordered text-center table-hover table-sm' id='tableau'>
@@ -54,31 +51,49 @@ if(isset($_POST)){
         $res.="</tr>
         </thead>
         <tbody>";
-        $Id_personneref="";
-        $Id_perioderef="1";
         while($row=$result->fetch()){
-          if($row['Id_personne']!=$Id_personneref){
-            $res.="</tr><tr><td rowspan='3' style='text-align: center;vertical-align: middle;'><b>".substr($row['Prenom'],0,1).".".$row['Nom']."</b></td><td>".$row['Nom_dispo']."</td>";
-            $Id_personneref=$row['Id_personne'];
-            $Id_perioderef="1";
-          }elseif($row['Id_periode']!=$Id_perioderef){
-            $res.="</tr><tr><td>".$row['Nom_dispo']."</td>";
-            $Id_perioderef=$row['Id_periode'];
-          }else{
-            $res.="<td>".$row['Nom_dispo']."</td>";
+          $res.="<tr><td rowspan='3' style='text-align: center;vertical-align: middle;'><b>".substr($row['Prenom'],0,1).".".$row['Nom']."</b></td>";
+          for($y=1;$y<=$row['Id_jour'];$y++){
+            $requete2="SELECT r1.Date, Nom_dispo
+            FROM
+            (SELECT *
+              FROM Date
+              WHERE Date BETWEEN '".$lundi."' AND '".$dimanche."' ORDER BY Date) AS r1
+              LEFT JOIN
+              (SELECT Date, Id_periode,
+              Nom_dispo
+              FROM Planning,
+              Disponibilite
+              WHERE Planning.Id_service='".$Id_service."'
+              AND Id_personne='".$row['Id_personne']."'
+              AND Id_periode = '".$y."'
+              AND (Date BETWEEN '".$lundi."' AND '".$dimanche."')
+              AND Planning.Id_dispo = Disponibilite.Id_dispo
+              ORDER BY Date) AS r2 ON r1.Date = r2.Date";
+              $result2=$bdd->prepare($requete2);
+              $result2->execute();
+              $err2 = $result2->errorInfo();
+              if(empty($err2[2])){
+                while($row2=$result2->fetch()){
+                  if($row2['Nom_dispo']==""){
+                    $res.="<td onclick='selectcolor(this)' value='".$row2['Date']."£".$row['Id_personne']."£".$y."'>&nbsp;</td>";
+                  }else{
+                    $res.="<td onclick='selectcolor(this)' value='".$row2['Date']."£".$row['Id_personne']."£".$y."'>".$row2['Nom_dispo']."</td>";
+                  }
+                }
+                $res.="</tr><tr>";
+              }
+            }
+            $res.="</tr>";
           }
+          $res.="</tr></tbody></table>";
         }
-        $res.="</tr></tbody></table>";
+      }else{
+        echo $err[2];
       }
     }else{
       echo $err[2];
     }
-  }else{
-    echo $err[2];
+    echo $res;
   }
-  echo $res;
-}
-
-
-
-?>
+  ?>

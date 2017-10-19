@@ -90,5 +90,5 @@ function daynow(){
 };
 
 function selectcolor(el) {
-    el.classList.toggle("bg-primary");
+    el.classList.toggle("bg-dark");
 }

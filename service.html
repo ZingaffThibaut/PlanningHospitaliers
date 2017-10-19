@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="ZINGRAFF THIBAUT">
+  <meta name="author" content="">
   <title>O'Planning</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,13 +21,20 @@
   <script src="js/Jquery/verifconnexion.js"></script>
   <script src="js/Jquery/suppconnexion.js"></script>
   <script src="js/Jquery/nom.js"></script>
+  <script src="js/Jquery/listeservice.js"></script>
+  <script src="js/Jquery/listeniveau.js"></script>
+  <script src="js/Jquery/ajoutservice.js"></script>
+  <script src="js/Jquery/affiservice.js"></script>
+  <script src="js/Jquery/modifservice.js"></script>
+  <script src="js/Jquery/deleteservice.js"></script>
   <script src="js/Jquery/nuit.js"></script>
-  <script src="js/Jquery/planning/semaine.js"></script>
+  <script src="js/Jquery/choixService.js"></script>
+  <script src="js/Jquery/chefonly.js"></script>
   <script src="js/Jquery/menuacces.js"></script>
   <script src="js/Jquery/horloge.js"></script>
 </head>
 
-<body class="fixed-nav bg-light" onload="testnuit(); daynow();">
+<body class="fixed-nav bg-light" onload="testnuit()">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="accueil.html"><i class="fa fa-fw fa-hospital-o"></i>O'Planning</a>
@@ -66,7 +73,7 @@
           </a>
         </li>
         <li class="nav-item" id="nav_service" data-toggle="tooltip" data-placement="right" title="Services">
-          <a class="nav-link" href="service.html">
+          <a class="nav-link" href="#">
             <i class="fa fa-fw fa-medkit"></i>
             <span class="nav-link-text">Services</span>
           </a>
@@ -84,10 +91,10 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
-          <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
-            <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
-          </a>
-        </li>
+            <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+              <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
+            </a>
+          </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -97,9 +104,10 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
+
         <li class="nav-item">
           <a class="nav-link" id="Profil" href="profil.html">
-            <i class="fa fa-fw fa-user"></i><span id="profil"></span>
+            <i class="fa fa-fw fa-user"></i> <span id="profil"></span>
           </a>
         </li>
         <li class="nav-item">
@@ -112,41 +120,35 @@
 
     <div class="content-wrapper">
       <div class="container-fluid">
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fa fa-fw fa-calendar"></i> Planning <i class="fa fa-arrow-right"></i> <span id="nomService"></span>
+        <div class="row">
+          <div class="col-lg-12">
+            <div id='tabtotal'>
+              <h1>Liste des services</h1>
+              <br>
+              <a href="ajoutservice.html" class="btn btn-success">Ajout</a>
+              <br>
+              <div id='tabservice' class='mt-3'>
+              </div>
+            </div>
+            <div id='modif' class='visibility :hidden; display :none ;'>
+            </div>
           </div>
-          <div class="card-body">
-            <form id="form_planning">
-              <input class="form-control" id="Date" type="date" onload="daynow()" onchange="Planningchar()" autofocus/>
-            </br>
-            </form>
-          </div>
-          <div class="mt-4" id="tab">
         </div>
       </div>
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/popper/popper.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+      <!-- Page level plugin JavaScript-->
+      <script src="vendor/datatables/jquery.dataTables.js"></script>
+      <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin.min.js"></script>
+      <!-- Custom scripts for this page-->
+      <script src="js/sb-admin-datatables.min.js"></script>
     </div>
-  </div>
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/popper/popper.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <!-- Page level plugin JavaScript-->
-  <script src="vendor/datatables/jquery.dataTables.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
-  <!-- Custom scripts for this page-->
-  <script src="js/sb-admin-datatables.min.js"></script>
-  <script src="js/Jquery/nuit.js"></script>
-  <script src="js/Jquery/verifconnexion.js"></script>
-  <script src="js/Jquery/suppconnexion.js"></script>
-  <script src="js/Jquery/nom.js"></script>
-  <script src="js/Jquery/choixService.js"></script>
-  <script src="js/Jquery/planning/date.js"></script>
-</div>
-</body>
+  </body>
 
-</html>
+  </html>

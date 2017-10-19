@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $.post(
+    "https://infodb.iutmetz.univ-lorraine.fr/~nunge1u/LP/PlanningHospitaliers/PHP/affiprofil.php",
+    function(data){
+      if(data!=""){
+          $("#tab").html(data);
+      }
+    }
+  );
+});

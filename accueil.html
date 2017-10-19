@@ -16,24 +16,43 @@
   <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/Jquery/verifconnexion.js"></script>
+  <script src="js/Jquery/suppconnexion.js"></script>
+  <script src="js/Jquery/horloge.js"></script>
+  <script src="js/Jquery/nom.js"></script>
+  <script src="js/Jquery/nuit.js"></script>
+  <script src="js/Jquery/choixService.js"></script>
+  <script src="js/Jquery/menuacces.js"></script>
+
 </head>
 
-<body class="fixed-nav bg-light">
+<body class="fixed-nav bg-light" onload="testnuit()">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
     <a class="navbar-brand" href="accueil.html"><i class="fa fa-fw fa-hospital-o"></i>O'Planning</a>
+    <div class="navbar-horloge">
+      <span id="horloge" class="clock"></span>
+    </div>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Acceuil">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Accueil">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-home"></i>
-            <span class="nav-link-text">Acceuil</span>
+            <span class="nav-link-text">Accueil</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Planning">
+        <li class="nav-item" id="nav_planning_all" data-toggle="tooltip" data-placement="right" title="Planning">
+          <a class="nav-link" href="planning.html" >
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Le planning</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_planning_admin" data-toggle="tooltip" data-placement="right" title="Planning">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Le planning</span>
@@ -41,10 +60,33 @@
           <ul class="sidenav-second-level collapse" id="Service">
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
+        <li class="nav-item" id="nav_gestionnaire" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
           <a class="nav-link" href="gestionnaire.html">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Gestionnaire</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_service" data-toggle="tooltip" data-placement="right" title="Services">
+          <a class="nav-link" href="service.html">
+            <i class="fa fa-fw fa-medkit"></i>
+            <span class="nav-link-text">Services</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_session" data-toggle="tooltip" data-placement="right" title="Sessions">
+          <a class="nav-link" href="session.html">
+            <i class="fa fa-fw fa-address-book"></i>
+            <span class="nav-link-text">Sessions</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Import">
+          <a class="nav-link" href="importcsv.html">
+            <i class="fa fa-fw fa-address-book"></i>
+            <span class="nav-link-text">ImportCSV</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
+          <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+            <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
           </a>
         </li>
       </ul>
@@ -58,28 +100,29 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" id="Profil" href="profil.html">
-            <i class="fa fa-fw fa-user"></i> <span id="profil">Mon profil</span>
+            <i class="fa fa-fw fa-user"></i> <span id="profil"></span>
           </a>
         </li>
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="toggleNavColor">
-              <i class="fa fa-fw fa-moon-o"></i><span id="nuit">Mode nuit</span>
-            </a>
+            <i class="fa fa-fw fa-sign-out"></i>Déconnexion</bouton>
+
           </li>
         </ul>
       </div>
     </nav>
-
     <div class="content-wrapper">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="text-align:center;">
           <div class="col-lg-12">
             <h1>Bienvenue</h1>
+            <p id="test">
+            </p>
           </div>
+          <!-- <div class="col-lg-12 mt-5">
+            <img src="img/logo.png" alt="logo">
+          </div> -->
+          <hr>
         </div>
       </div>
     </div>
@@ -102,6 +145,7 @@
     <script src="js/Jquery/nom.js"></script>
     <script src="js/Jquery/choixService.js"></script>
   </div>
+
 </body>
 
 </html>

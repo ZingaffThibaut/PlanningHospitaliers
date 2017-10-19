@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $.post(
+    "https://infodb.iutmetz.univ-lorraine.fr/~nunge1u/LP/PlanningHospitaliers/PHP/listeservice.php",
+    function(data){
+      if(data!=""){
+          $("#option-service").html(data);
+      }
+    }
+  );
+});

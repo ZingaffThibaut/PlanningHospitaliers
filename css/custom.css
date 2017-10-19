@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 .thead-default > tr > th{
   text-align: center;
 }
@@ -17,13 +18,30 @@
 
 .th-planning {
   padding: 5px;
+  font-size: 30px;
+  Font-Weight: Bold;
+}
+
+.th-planning:hover{
+  color: #c0392b;
+}
+.th-planning-inactive{
+  padding: 5px;
+  font-size: 30px;
+  Font-Weight: Bold;
 }
 
 .th-planning-active{
   color: #c0392b;
   padding: 5px;
 }
-
-.card-body {
-  overflow: scroll;
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.navbar-horloge{
+  padding-left: 50px;
+}
+.clock{
+    color: #c0392b;
 }

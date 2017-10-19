@@ -90,5 +90,24 @@ function daynow(){
 };
 
 function selectcolor(el) {
-    el.classList.toggle("bg-dark");
+  el.classList.toggle("bg-dark");
+  el.classList.toggle("text-muted");
+}
+
+function T(){
+  var tab = $(".text-muted").get();
+  var i=0;
+  while (typeof tab[i] !== 'undefined') {
+    alert(tab[i]);
+    alert(tab[i].value);
+    i++;
+  }
+}
+
+function RC(){
+
+}
+
+function RH(){
+
 }

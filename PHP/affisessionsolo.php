@@ -33,7 +33,7 @@ if(isset($_POST)){
         <input class='form-control' type='password' id='mdp' value='".$row['mdp']."'/>
       </p>
       <p>Vérification du mot de passe
-        <input class='form-control' type='password' id='mdp' value='".$row['mdpv']."'/>
+        <input class='form-control' type='password' id='mdpv' value='".$row['mdpv']."'/>
       </p>
       <br>
       <button class='btn btn-success' onclick='modif_session()'>Valider</button>

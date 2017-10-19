@@ -14,7 +14,6 @@ $(function(){
         Id_lvl : Niveau
       },
       function(data){
-        alert(data);
         if (data == "ok"){
           window.location.href ='gestionnaire.html';
         } else {

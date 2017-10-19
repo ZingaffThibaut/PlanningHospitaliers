@@ -16,7 +16,7 @@ if(isset($_POST)){
       $nb = $row['nb'];
       $nb++;
     }
-  $requete="INSERT INTO Service VALUE('".$nb."','".$Nom_service."','0')";
+  $requete="INSERT INTO Service VALUE('".$nb."','".$Nom_service."','0','".$Id_jour."')";
   $result=$bdd->prepare($requete);
   $result->execute();
   $err = $result->errorInfo();

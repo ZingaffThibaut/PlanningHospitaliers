@@ -42,7 +42,6 @@ if(isset($_POST)){
   }
   $login = substr($Nom,0,1).".".$Prenom;
   $requete="INSERT INTO Connexion VALUE('','".$Id_lvl."','".$login."','".chaine_aleatoire(8)."','".$nb."','0')";
-  echo $requete;
   $result=$bdd->prepare($requete);
   $result->execute();
   $err = $result->errorInfo();

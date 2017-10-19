@@ -1,21 +1,38 @@
 <?php
-  print_r($_FILES);
+  if(!empty($_FILES['fichierCSV']['name'])){
 
-  // if(in_array($_FILES['uploadFile']['name'])){
-  //   $extensionAutorise = array("csv");
-  //   $extentsion = end(explode(".", $_FILES['uploadFile']));
-  //   if(in_array($extension, $extensionAutorise)){
-  //     $file_data = fopen(,"r");
-  //     fgetcsv($file_data);
-  //     while($row = fgetcsv($file_data)){
-  //       print_r($row);
-  //     }
-  //   }else{
-  //     echo("error 2");
-  //   }
-  // }else{
-  //   echo("error 1");
-  // }
+    $extensionAutorise  = array("csv");
+    $extension          = end(explode(".", $_FILES['fichierCSV']['name']));
+
+    $ligne = 1;
+
+
+    if(in_array($extension, $extensionAutorise)){
+
+      $file_data  = fopen($_FILES['fichierCSV']['tmp_name'],"r");
+      //fgetcsv($file_data);
+
+      while($row = fgetcsv($file_data,1000,';')){
+
+        $champs = count($row);
+
+        echo "<b> Les " . $champs . " champs de la ligne " . $ligne . " sont :</b><br />";
+        $ligne ++;
+
+        for($i=0; $i<$champs; $i ++){
+        echo $row[$i] . "<br />";
+        }
+      }
+    }else{
+
+      echo("error 2");
+
+    }
+  }else{
+
+    echo("error 1");
+
+  }
 
 
 ?>

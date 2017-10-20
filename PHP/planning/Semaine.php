@@ -76,9 +76,9 @@ if(isset($_POST)){
               if(empty($err2[2])){
                 while($row2=$result2->fetch()){
                   if($row2['Nom_dispo']==""){
-                    $res.="<td id='selected' onclick='selectcolor(this)' value='".$row2['Date']."£".$row['Id_personne']."£".$y."'>&nbsp;</td>";
+                    $res.="<td onclick='selectcolor(this)' id='".$row2['Date']."£".$row['Id_personne']."£".$y."'>&nbsp;</td>";
                   }else{
-                    $res.="<td  id='selected' onclick='selectcolor(this)' value='".$row2['Date']."£".$row['Id_personne']."£".$y."'>".$row2['Nom_dispo']."</td>";
+                    $res.="<td onclick='selectcolor(this)' id='".$row2['Date']."£".$row['Id_personne']."£".$y."'>".$row2['Nom_dispo']."</td>";
                   }
                 }
                 $res.="</tr><tr>";

@@ -95,19 +95,77 @@ function selectcolor(el) {
 }
 
 function T(){
+  var service = document.getElementById("nomService").innerHTML;
   var tab = $(".text-muted").get();
   var i=0;
   while (typeof tab[i] !== 'undefined') {
-    alert(tab[i]);
-    alert(tab[i].value);
+     var cels = tab[i].id;
+     var res = cels.split("£");
+     $.post(
+       "PHP/planning/modifplanning.php",
+       {
+         date : res[0],
+         Id_personne : res[1],
+         Id_periode : res[2],
+         Choix : 1,
+         service : service
+       },
+       function(data){
+         console.log(data);
+         Planningchar();
+       }
+     );
     i++;
   }
 }
 
 function RC(){
-
+    var service = document.getElementById("nomService").innerHTML;
+    var tab = $(".text-muted").get();
+    var i=0;
+    while (typeof tab[i] !== 'undefined') {
+       var cels = tab[i].id;
+       var res = cels.split("£");
+       $.post(
+         "PHP/planning/modifplanning.php",
+         {
+           date : res[0],
+           Id_personne : res[1],
+           Id_periode : res[2],
+           Choix : 2,
+           service : service
+         },
+         function(data){
+           console.log(data);
+           Planningchar();
+         }
+       );
+      i++;
+    }
 }
 
 function RH(){
+  var service = document.getElementById("nomService").innerHTML;
+  var tab = $(".text-muted").get();
+  var i=0;
+  while (typeof tab[i] !== 'undefined') {
+     var cels = tab[i].id;
+     var res = cels.split("£");
+     $.post(
+       "PHP/planning/modifplanning.php",
+       {
+         date : res[0],
+         Id_personne : res[1],
+         Id_periode : res[2],
+         Choix : 3,
+         service : service
+       },
+       function(data){
+         console.log(data);
+         Planningchar();
+       }
+     );
+    i++;
+  }
 
 }

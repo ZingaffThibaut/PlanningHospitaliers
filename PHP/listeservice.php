@@ -14,7 +14,7 @@ if(empty($err[2])){
   if($result->rowCount()>0){
     $resultat="";
     while($row=$result->fetch()){
-      $resultat.="<option value='".$row['Id_service']."'>".$row['Nom_service']."</option>
+      $resultat.="<option value='".$row['Id_service']."'>".utf8_encode(utf8_decode($row['Nom_service']))."</option>
       ";
     }
     echo $resultat;

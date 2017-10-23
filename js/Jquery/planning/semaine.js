@@ -1,7 +1,18 @@
 $(document).ready(function(){
-  var service = $(location).attr('search');
-  service     = service.substring(9);
-  $("#nomService").html(service);
+
+  if((window.location.href).indexOf('?') != -1) {
+    var queryString = (window.location.href).substr((window.location.href).indexOf('?') + 1);
+
+    // "queryString" will now contain kerdesPost=fdasdas%20ad%20asd%20ad%20asdas
+
+    var value = (queryString.split('='))[1];
+
+    // "value" will now contain fdasdas%20ad%20asd%20ad%20asdas
+
+    service = decodeURIComponent(value);
+
+    $("#nomService").html(service);
+  };
 
 
   var date = new Date();
@@ -111,7 +122,6 @@ function T(){
         service : service
       },
       function(data){
-        console.log(data);
         Planningchar();
       }
     );
@@ -136,7 +146,6 @@ function RC(){
         service : service
       },
       function(data){
-        console.log(data);
         Planningchar();
       }
     );
@@ -161,7 +170,6 @@ function RH(){
         service : service
       },
       function(data){
-        console.log(data);
         Planningchar();
       }
     );
@@ -174,14 +182,15 @@ function Selectperso(perso){
   var array = document.getElementById("tableau").rows;
   var longeur = array.length;
   var i=1;
+  var res = perso.split("£");
   while(i<longeur){
     if(array[i].cells.item(0)){
-      if(array[i].cells.item(0).id == perso){
+      if(array[i].cells.item(0).id == res[0]){
         for(y=0;y<=7;y++){
           if(array[i].cells.item(y)){
-            selectcolor(array[i].cells.item(y));
-            selectcolor(array[i+1].cells.item(y));
-            selectcolor(array[i+2].cells.item(y));
+            for(z=0;z<res[1];z++){
+              selectcolor(array[i+z].cells.item(y));
+            }
           }
         }
       }

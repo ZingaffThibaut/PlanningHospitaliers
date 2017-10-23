@@ -1,17 +1,5 @@
-// $("#Upload").click(function() {
-//   fichier = document.getElementById("uploadFile").value;
-//   $.post(
-//     "PHP/importcsv.php", {
-//       Files: new FormData(fichier),
-//     },
-//     function(data) {
-//       alert(data);
-//       $("#corps").append(data);
-//     },
-//   )
-// });
-
 $(document).ready(function(){
+  date =  document.getElementById("Date").value;
   $("#formUpload").submit(function(e){
     e.preventDefault();
     $.ajax({

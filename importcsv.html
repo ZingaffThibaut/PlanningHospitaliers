@@ -103,11 +103,14 @@
           </div>
           <form action="#" id="formUpload" method="post" enctype="multipart/form-data">
             <div class="form-group">
-              <input type="file" name="fichierCSV" id="uploadFile" class="form-control" />
+              <input name="date" id="Date" type="date" onload="daynow()" onchange="Planningchar()" class="form-control" autofocus />
+            </div>
+            <div class="form-group">
+              <input name="fichierCSV" type="file" id="uploadFile" class="form-control" />
             </div>
             <div class="form-group">
               <br>
-              <input type="submit" id="Upload" class="form-control" value="Upload"/>
+              <input type="submit" id="Upload" value="Upload" class="form-control" />
             </div>
           </form>
           <!-- <div class="center" id="uploadStatus">No upload yet</div> -->
@@ -135,11 +138,7 @@
     <script src="js/Jquery/verifconnexion.js"></script>
     <script src="js/Jquery/suppconnexion.js"></script>
     <script src="js/Jquery/nom.js"></script>
-    <script src="js/Jquery/choixService.js"></script>
     <script src="js/Jquery/planning/date.js"></script>
-    <script src="js/Jquery/planning/horraire.js"></script>
-    <script src="js/Jquery/planning/planning.js"></script>
-    <script src="js/Jquery/planning/modifDate.js"></script>
     <script src="js/Jquery/importcsv.js"></script>
   </div>
 </body>

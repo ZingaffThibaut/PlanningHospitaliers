@@ -1,4 +1,5 @@
 <?php
+  print_r($_POST);
   if(!empty($_FILES['fichierCSV']['name'])){
 
     $extensionAutorise  = array("csv");

@@ -11,9 +11,13 @@ $(document).ready(function(){
         $("#nav_session").css("display", "none");
         $("#nav_planning_admin").css("visibility", "hidden");
         $("#nav_planning_admin").css("display", "none");
+        $("#nav_planning_perso").css("visibility", "hidden");
+        $("#nav_planning_perso").css("display", "none");
       }else if(data == "Personnel"){
         $("#nav_planning_admin").css("visibility", "hidden");
         $("#nav_planning_admin").css("display", "none");
+        $("#nav_planning_chef").css("visibility", "hidden");
+        $("#nav_planning_chef").css("display", "none");
         $("#nav_session").css("visibility", "hidden");
         $("#nav_session").css("display", "none");
         $("#nav_gestionnaire").css("visibility", "hidden");
@@ -23,6 +27,10 @@ $(document).ready(function(){
       }else if(data == "Admin"){
         $("#nav_planning_all").css("visibility", "hidden");
         $("#nav_planning_all").css("display", "none");
+        $("#nav_planning_chef").css("visibility", "hidden");
+        $("#nav_planning_chef").css("display", "none");
+        $("#nav_planning_perso").css("visibility", "hidden");
+        $("#nav_planning_perso").css("display", "none");
       }
     });
   });

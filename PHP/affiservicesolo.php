@@ -26,7 +26,7 @@ if(isset($_POST)){
       <form method='post' role='form' id='form_perso' action='#'>
       <br>
       <input class='form-control' type='hidden' id='Id_service' value='".$row['Id_service']."'/>
-      <p>Nom du service:
+      <p>Nom du service
         <input class='form-control' type='text' id='nom_service' value='".$row['Nom_service']."'/>
       </p>
       <br>

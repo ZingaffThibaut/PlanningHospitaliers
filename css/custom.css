@@ -12,7 +12,7 @@
 }
 
 .color-red{
-  color: #c0392b;
+  color: #E04640;
   font-size: 50px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .th-planning:hover{
-  color: #c0392b;
+  color: #E04640;
 }
 .th-planning-inactive{
   padding: 5px;
@@ -32,14 +32,17 @@
 }
 
 .th-planning-active{
-  color: #c0392b;
+  color: #E04640;
   padding: 5px;
 }
 .hidden {
   display: none !important;
   visibility: hidden !important;
 }
-
+.navbar-horloge{
+  padding-right: 10px;
+  padding-top: 10px;
+}
 .clock{
-    color: white;
+    color: #E04640;
 }

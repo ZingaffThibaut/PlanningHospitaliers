@@ -6,13 +6,7 @@ if(isset($_POST)){
   include("../connexion.php");
   extract($_POST);
 
-  $requete="SELECT Id_service FROM Service WHERE Nom_service='".$service."'";
-  $result=$bdd->prepare($requete);
-  $result->execute();
-  $err = $result->errorInfo();
-  if(empty($err[2])){
-    $row = $result->fetch();
-    $Id_service= $row['Id_service'];
+    $Id_service = $_SESSION['service'];
     $date= new DateTime($date);
     $date->modify('sunday');
     $dimanche = $date->format('Y-m-d');
@@ -95,5 +89,4 @@ if(isset($_POST)){
       echo $err[2];
     }
     echo $res;
-  }
   ?>

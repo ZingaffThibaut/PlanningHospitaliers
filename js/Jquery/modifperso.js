@@ -59,7 +59,6 @@ function modif_perso(){
         Niveau: Niveau
       },
       function(data){
-        alert(data);
       }
     );
 

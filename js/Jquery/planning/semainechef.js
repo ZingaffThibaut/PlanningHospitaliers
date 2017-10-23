@@ -1,17 +1,12 @@
 $(document).ready(function(){
-  var service = $(location).attr('search');
-  service     = service.substring(9);
-  $("#nomService").html(service);
-
 
   var date = new Date();
   var affi = "";
   var el = affi.concat(date.getFullYear(),"-",date.getMonth()+1,"-",date.getDate());
 
   $.post(
-    "PHP/planning/Semaine.php",
+    "PHP/planning/Semainechef.php",
     {
-      service : service,
       date : el
     },
     function(data){

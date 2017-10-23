@@ -11,28 +11,21 @@
     if(in_array($extension, $extensionAutorise)){
 
       $file_data  = fopen($_FILES['fichierCSV']['tmp_name'],"r");
-      //fgetcsv($file_data);
-
       while($row = fgetcsv($file_data,1000,';')){
+        $champs = count($row)
 
-        $champs = count($row);
-
-        echo "<b> Les " . $champs . " champs de la ligne " . $ligne . " sont :</b><br />";
-        $ligne ++;
-
-        for($i=0; $i<$champs; $i ++){
-        echo $row[$i] . "<br />";
+        if($ligne > 1){
+          echo "Personne : ".$row[0].'<br>';
+          for($i=1; $i<$champs; $i ++){
+            echo '|'.$row[$i].'|';
+          }
         }
       }
     }else{
-
       echo("error 2");
-
     }
   }else{
-
     echo("error 1");
-
   }
 
 

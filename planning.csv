@@ -1,4 +1,4 @@
-;Lundi;Mardi;Mercredi;Jeudi;Vendredi
-Alexis Lajoux;T;RC;RH;RH;T
-;RC;T;RH;RH;RC
-;RC;RC;T;T;RC
+-;Lundi;Mardi;Mercredi;Jeudi;Vendredi;Samedi;Dimanche
+Alexis Lajoux;T;RC;RH;;T;T;
+;RC;T;RH;RH;RC;RC;RH
+;RC;RC;T;T;RC;RC;RH

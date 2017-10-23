@@ -99,49 +99,49 @@ function T(){
   var tab = $(".text-muted").get();
   var i=0;
   while (typeof tab[i] !== 'undefined') {
-     var cels = tab[i].id;
-     var res = cels.split("£");
-     $.post(
-       "PHP/planning/modifplanning.php",
-       {
-         date : res[0],
-         Id_personne : res[1],
-         Id_periode : res[2],
-         Choix : 1,
-         service : service
-       },
-       function(data){
-         console.log(data);
-         Planningchar();
-       }
-     );
+    var cels = tab[i].id;
+    var res = cels.split("£");
+    $.post(
+      "PHP/planning/modifplanning.php",
+      {
+        date : res[0],
+        Id_personne : res[1],
+        Id_periode : res[2],
+        Choix : 1,
+        service : service
+      },
+      function(data){
+        console.log(data);
+        Planningchar();
+      }
+    );
     i++;
   }
 }
 
 function RC(){
-    var service = document.getElementById("nomService").innerHTML;
-    var tab = $(".text-muted").get();
-    var i=0;
-    while (typeof tab[i] !== 'undefined') {
-       var cels = tab[i].id;
-       var res = cels.split("£");
-       $.post(
-         "PHP/planning/modifplanning.php",
-         {
-           date : res[0],
-           Id_personne : res[1],
-           Id_periode : res[2],
-           Choix : 2,
-           service : service
-         },
-         function(data){
-           console.log(data);
-           Planningchar();
-         }
-       );
-      i++;
-    }
+  var service = document.getElementById("nomService").innerHTML;
+  var tab = $(".text-muted").get();
+  var i=0;
+  while (typeof tab[i] !== 'undefined') {
+    var cels = tab[i].id;
+    var res = cels.split("£");
+    $.post(
+      "PHP/planning/modifplanning.php",
+      {
+        date : res[0],
+        Id_personne : res[1],
+        Id_periode : res[2],
+        Choix : 2,
+        service : service
+      },
+      function(data){
+        console.log(data);
+        Planningchar();
+      }
+    );
+    i++;
+  }
 }
 
 function RH(){
@@ -149,23 +149,43 @@ function RH(){
   var tab = $(".text-muted").get();
   var i=0;
   while (typeof tab[i] !== 'undefined') {
-     var cels = tab[i].id;
-     var res = cels.split("£");
-     $.post(
-       "PHP/planning/modifplanning.php",
-       {
-         date : res[0],
-         Id_personne : res[1],
-         Id_periode : res[2],
-         Choix : 3,
-         service : service
-       },
-       function(data){
-         console.log(data);
-         Planningchar();
-       }
-     );
+    var cels = tab[i].id;
+    var res = cels.split("£");
+    $.post(
+      "PHP/planning/modifplanning.php",
+      {
+        date : res[0],
+        Id_personne : res[1],
+        Id_periode : res[2],
+        Choix : 3,
+        service : service
+      },
+      function(data){
+        console.log(data);
+        Planningchar();
+      }
+    );
     i++;
   }
 
+}
+
+function Selectperso(perso){
+  var array = document.getElementById("tableau").rows;
+  var longeur = array.length;
+  var i=1;
+  while(i<longeur){
+    if(array[i].cells.item(0)){
+      if(array[i].cells.item(0).id == perso){
+        for(y=0;y<=7;y++){
+          if(array[i].cells.item(y)){
+            selectcolor(array[i].cells.item(y));
+            selectcolor(array[i+1].cells.item(y));
+            selectcolor(array[i+2].cells.item(y));
+          }
+        }
+      }
+    }
+    i++;
+  }
 }

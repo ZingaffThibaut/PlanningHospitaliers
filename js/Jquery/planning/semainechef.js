@@ -180,3 +180,26 @@ function Selectperso(perso){
     i++;
   }
 }
+
+function Selectperso(perso){
+  var array = document.getElementById("tableau").rows;
+  var longeur = array.length;
+  var i=1;
+  var personne = Math.floor(perso);
+  var nb = Math.round(perso % 1 *10);
+  while(i<longeur){
+    if(array[i].cells.item(1)){
+      id = array[i].cells.item(1).id.split("£");
+      if(id[1] == personne){
+        for(y=0;y<=7;y++){
+          if(array[i].cells.item(y)){
+            for(z=0;z<nb;z++){
+              selectcolor(array[i+z].cells.item(y));
+            }
+          }
+        }
+      }
+    }
+    i++;
+  }
+}

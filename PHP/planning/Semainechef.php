@@ -46,7 +46,7 @@ if(isset($_POST)){
         </thead>
         <tbody>";
         while($row=$result->fetch()){
-          $res.="<tr><td rowspan='3' id='".$row['Id_personne']."' onclick='Selectperso(".$row['Id_personne'].");' style='text-align: center;vertical-align: middle;'><b>".substr($row['Prenom'],0,1).".".$row['Nom']."</b></td>";
+          $res.="<tr><td rowspan='3' onclick='Selectperso(".$row['Id_personne'].".".$row['Id_jour'].")' style='text-align: center;vertical-align: middle;'><b>".substr($row['Prenom'],0,1).".".$row['Nom']."</b></td>";
           for($y=1;$y<=$row['Id_jour'];$y++){
             $requete2="SELECT r1.Date, Nom_dispo
             FROM

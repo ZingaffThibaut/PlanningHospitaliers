@@ -3,11 +3,7 @@ $(document).ready(function(){
   if((window.location.href).indexOf('?') != -1) {
     var queryString = (window.location.href).substr((window.location.href).indexOf('?') + 1);
 
-    // "queryString" will now contain kerdesPost=fdasdas%20ad%20asd%20ad%20asdas
-
     var value = (queryString.split('='))[1];
-
-    // "value" will now contain fdasdas%20ad%20asd%20ad%20asdas
 
     service = decodeURIComponent(value);
 
@@ -50,7 +46,7 @@ $(document).ready(function(){
       }
     }
   );
-});
+})
 
 
 function Planningchar(){
@@ -89,7 +85,7 @@ function Planningchar(){
       }
     }
   );
-};
+}
 
 
 
@@ -98,7 +94,7 @@ function daynow(){
   var date = new Date();
   var affi= "";
   document.getElementById('Date').value = affi.concat(date.getFullYear(),"-",date.getMonth()+1,"-",date.getDate());
-};
+}
 
 function selectcolor(el) {
   el.classList.toggle("bg-dark");
@@ -175,20 +171,21 @@ function RH(){
     );
     i++;
   }
-
 }
 
 function Selectperso(perso){
   var array = document.getElementById("tableau").rows;
   var longeur = array.length;
   var i=1;
-  var res = perso.split("£");
+  var personne = Math.floor(perso);
+  var nb = Math.round(perso % 1 *10);
   while(i<longeur){
-    if(array[i].cells.item(0)){
-      if(array[i].cells.item(0).id == res[0]){
+    if(array[i].cells.item(1)){
+      id = array[i].cells.item(1).id.split("£");
+      if(id[1] == personne){
         for(y=0;y<=7;y++){
           if(array[i].cells.item(y)){
-            for(z=0;z<res[1];z++){
+            for(z=0;z<nb;z++){
               selectcolor(array[i+z].cells.item(y));
             }
           }

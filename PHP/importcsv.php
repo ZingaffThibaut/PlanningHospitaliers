@@ -68,17 +68,17 @@ if(!empty($_FILES['fichierCSV']['name'])){
             }
           }
         }else{
-          echo("error 2");
+          $er++;
         }
       }
       $ligne++;
     }
-    echo"Importation réussi <br>".$in." ligne insert et ".$up." ligne modifié ".$er."error";
+    echo "<div class='alert alert-success' role='alert'><b>Importation réussi</b> <br>".$in." ligne insérée(s) <br> ".$up." ligne modifiée(s) <br>".$er." erreur(s)</div>";
   }else{
-    echo("Fichier de mauvais type, utiliser le ficher CSV fourni");
+    echo("<div class='alert alert-danger' role='alert'>Fichier de mauvais type, utiliser le ficher CSV fourni<div>");
   }
 }else{
-  echo("Merci de selectionner un ficher");
+  echo("<div class='alert alert-danger' role='alert'>Merci de selectionner un ficher<div>");
 }
 
 

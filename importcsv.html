@@ -79,7 +79,7 @@
             <span class="nav-link-text">Sessions</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Import">
+        <li class="nav-item" id="nav_csv" data-toggle="tooltip" data-placement="right" title="Import">
           <a class="nav-link" href="importcsv.html">
             <i class="fa fa-fw fa-file-excel-o"></i>
             <span class="nav-link-text">Import CSV</span>
@@ -126,8 +126,8 @@
               <label>Importer un planning CSV :</label>
             </div>
           </div>
-          <a class="btn btn-succes" href="planning.csv"> Télecharger fichier type CSV</a>
-          <br>
+          <a class="btn btn-primary" href="planning.csv"> Télecharger fichier type CSV</a>
+          <hr>
           <form action="#" id="formUpload" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <input name="fichierCSV" type="file" id="uploadFile" class="form-control" />

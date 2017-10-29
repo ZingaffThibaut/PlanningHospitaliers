@@ -50,6 +50,7 @@ $(document).ready(function(){
 
 
 function Planningchar(){
+
   service = document.getElementById("nomService").innerHTML;
   var date = new Date(document.getElementById("Date").value);
   var affi = "";

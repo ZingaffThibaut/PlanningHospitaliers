@@ -28,6 +28,8 @@ $(document).ready(function(){
         $("#nav_gestionnaire").css("display", "none");
         $("#nav_service").css("visibility", "hidden");
         $("#nav_service").css("display", "none");
+        $("#nav_csv").css("visibility", "hidden");
+        $("#nav_csv").css("display", "none");nav_csv
       }else if(data == "Admin"){
         $("#nav_planning_all").css("visibility", "hidden");
         $("#nav_planning_all").css("display", "none");

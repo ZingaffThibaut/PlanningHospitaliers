@@ -35,13 +35,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="acceuil">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Accueil">
           <a class="nav-link" href="accueil.html">
             <i class="fa fa-fw fa-home"></i>
-            <span class="nav-link-text">Acceuil</span>
+            <span class="nav-link-text">Accueil</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Planning">
+        <li class="nav-item" id="nav_planning_perso" data-toggle="tooltip" data-placement="right" title="Planning">
+          <a class="nav-link" href="planningperso.html" >
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Le planning</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_planning_chef" data-toggle="tooltip" data-placement="right" title="Planning">
+          <a class="nav-link" href="planningchef.html" >
+            <i class="fa fa-fw fa-calendar"></i>
+            <span class="nav-link-text">Le planning</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav_planning_admin" data-toggle="tooltip" data-placement="right" title="Planning">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Service" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-calendar"></i>
             <span class="nav-link-text">Le planning</span>
@@ -49,35 +61,35 @@
           <ul class="sidenav-second-level collapse" id="Service">
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
-          <a class="nav-link" href="gestionnaire.html">
+        <li class="nav-item" id="nav_gestionnaire" data-toggle="tooltip" data-placement="right" title="Gestionnaire">
+          <a class="nav-link" href="#">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Gestionnaire</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Services">
+        <li class="nav-item" id="nav_service" data-toggle="tooltip" data-placement="right" title="Services">
           <a class="nav-link" href="service.html">
             <i class="fa fa-fw fa-medkit"></i>
             <span class="nav-link-text">Services</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sessions">
+        <li class="nav-item" id="nav_session" data-toggle="tooltip" data-placement="right" title="Sessions">
           <a class="nav-link" href="session.html">
             <i class="fa fa-fw fa-address-book"></i>
             <span class="nav-link-text">Sessions</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Import">
-          <a class="nav-link" href="#">
+        <li class="nav-item" id="nav_csv" data-toggle="tooltip" data-placement="right" title="Import">
+          <a class="nav-link" href="importcsv.html">
             <i class="fa fa-fw fa-file-excel-o"></i>
             <span class="nav-link-text">Import CSV</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Mode nuit">
-          <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
+            <a class="nav-link" onclick="Nuit()" id="toggleNavColor">
               <i class="fa fa-fw fa-moon-o"></i><span class="nav-link-text" id="nuit">Mode Nuit</span>
             </a>
-        </li>
+          </li>
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -94,16 +106,16 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="Profil" href="profil.html">
-            <i class="fa fa-fw fa-user"></i><span id="profil"></span>
+            <i class="fa fa-fw fa-user"></i> <span id="profil"></span>
           </a>
         </li>
         <li class="nav-item">
           <bouton class="nav-link" data-toggle="modal" onclick="Supp()" data-target="#exampleModal">
-            <i class="fa fa-fw fa-sign-out"></i>Déconnexion</bouton>
-        </li>
-      </ul>
-    </div>
-  </nav>
+            <i class="fa fa-fw fa-sign-out" ></i>Déconnexion</bouton>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
   <div class="content-wrapper">
     <div class="container-fluid">
@@ -114,10 +126,9 @@
               <label>Importer un planning CSV :</label>
             </div>
           </div>
+          <a class="btn btn-primary" href="planning.csv"> Télecharger fichier type CSV</a>
+          <hr>
           <form action="#" id="formUpload" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <input name="date" id="Date" type="date" onload="daynow()" class="form-control" autofocus />
-            </div>
             <div class="form-group">
               <input name="fichierCSV" type="file" id="uploadFile" class="form-control" />
             </div>
@@ -129,7 +140,6 @@
           <!-- <div class="center" id="uploadStatus">No upload yet</div> -->
           <hr>
           <div class="corps">
-            <label>Data :</label><br>
           </div>
         </div>
       </div>
@@ -151,8 +161,9 @@
     <script src="js/Jquery/verifconnexion.js"></script>
     <script src="js/Jquery/suppconnexion.js"></script>
     <script src="js/Jquery/nom.js"></script>
-    <script src="js/Jquery/planning/date.js"></script>
     <script src="js/Jquery/importcsv.js"></script>
+    <script src="js/Jquery/menuacces.js"></script>
+    <script src="js/Jquery/horloge.js"></script>
   </div>
 </body>
 

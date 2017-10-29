@@ -11,7 +11,7 @@ if(isset($_POST)){
   if(empty($err[2])){
     $row = $result->fetch();
     $Id_service= $row['Id_service'];
-    $requete="SELECT * FROM Planning WHERE Id_personne='".$Id_personne."' AND Date ='".$date."' AND Id_periode ='".$Id_periode."' ";
+    $requete="SELECT * FROM Planning WHERE Id_personne='".$Id_personne."' AND Date ='".$date."' AND Id_periode ='".$Id_periode."' AND Id_service='".$Id_service."' ";
     $result=$bdd->prepare($requete);
     $result->execute();
     $err = $result->errorInfo();
@@ -23,7 +23,7 @@ if(isset($_POST)){
       echo 'ok';
       $nb = $result->rowCount();
       if($nb!=0){
-        $requete="UPDATE Planning SET Id_dispo ='".$Choix."' WHERE Id_personne='".$Id_personne."' AND Date ='".$date."' AND Id_periode ='".$Id_periode."' ";
+        $requete="UPDATE Planning SET Id_dispo ='".$Choix."' WHERE Id_personne='".$Id_personne."' AND Date ='".$date."' AND Id_periode ='".$Id_periode."' AND Id_service='".$Id_service."' ";
         $result=$bdd->prepare($requete);
         $result->execute();
         $err = $result->errorInfo();

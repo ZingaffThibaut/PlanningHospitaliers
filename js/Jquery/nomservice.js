@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $.post(
+    "PHP/nomservicechef.php",
+    function(data){
+      if(data!=""){
+          $("#nomService").html(data);
+      }
+    }
+  );
+});

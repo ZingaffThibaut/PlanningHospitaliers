@@ -13,6 +13,10 @@ $(document).ready(function(){
         $("#nav_planning_admin").css("display", "none");
         $("#nav_planning_perso").css("visibility", "hidden");
         $("#nav_planning_perso").css("display", "none");
+        $("#nav_gestionnaire").css("visibility", "hidden");
+        $("#nav_gestionnaire").css("display", "none");
+        $("#nav_service").css("visibility", "hidden");
+        $("#nav_service").css("display", "none");
       }else if(data == "Personnel"){
         $("#nav_planning_admin").css("visibility", "hidden");
         $("#nav_planning_admin").css("display", "none");

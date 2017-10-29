@@ -26,11 +26,13 @@ function Retour(){
 function modif_service(){
   Id_service = document.getElementById("Id_service").value;
   nom = document.getElementById("nom_service").value;
+  Jour = document.getElementById("Id_jour").value;
   $.post(
     "PHP/modifservice.php",
     {
       Id_service: Id_service,
-      Nom: nom
+      Nom: nom,
+      Jour: Jour
     },
     function(data){
       alert(data);

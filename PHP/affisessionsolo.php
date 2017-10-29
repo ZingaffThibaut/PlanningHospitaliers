@@ -20,7 +20,7 @@ if(isset($_POST)){
   }else{
     while($row = $result->fetch()){
       $res="<h1>Modification d'une session</h1>
-      <button class='btn' onclick='Retour()'>Retour</button>
+      <button class='btn btn-secondary' onclick='Retour()'>Retour</button>
       <br>
       <form method='post' role='form' id='modif_session' action='#'>
       <br>

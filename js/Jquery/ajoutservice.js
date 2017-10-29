@@ -2,7 +2,7 @@ $(function(){
 
   $("#form_ajout").submit(function(){
     Nom_service = document.getElementById("nom_service").value;
-    Id_jour = document.getElementById("option-periode").value;
+    Id_jour = document.getElementById("Id_jour").value;
     $.post(
       "PHP/ajoutservice.php",
       {

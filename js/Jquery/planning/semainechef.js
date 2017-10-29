@@ -38,14 +38,12 @@ $(document).ready(function(){
 
 
 function Planningchar(){
-  service = document.getElementById("nomService").innerHTML;
   var date = new Date(document.getElementById("Date").value);
   var affi = "";
   var el = affi.concat(date.getFullYear(),"-",date.getMonth()+1,"-",date.getDate());
   $.post(
-    "PHP/planning/Semaine.php",
+    "PHP/planning/Semainechef.php",
     {
-      service : service,
       date : el
     },
     function(data){

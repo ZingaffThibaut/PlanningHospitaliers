@@ -24,6 +24,7 @@ if(isset($_POST)){
     Service
     WHERE Personne.Id_service='".$Id_service."'
     AND Personne.Id_service = Service.Id_service
+    AND Personne.Id_affi = 0
     ORDER BY Id_personne";
 
     $tabsemaine=['','L','M','Me','J','V','S','D'];

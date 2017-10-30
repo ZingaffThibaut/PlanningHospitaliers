@@ -119,7 +119,6 @@ function T(){
         service : service
       },
       function(data){
-        alert(data);
         Planningchar();
       }
     );

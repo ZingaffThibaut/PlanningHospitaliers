@@ -163,26 +163,6 @@ function Selectperso(perso){
   var array = document.getElementById("tableau").rows;
   var longeur = array.length;
   var i=1;
-  while(i<longeur){
-    if(array[i].cells.item(0)){
-      if(array[i].cells.item(0).id == perso){
-        for(y=0;y<=7;y++){
-          if(array[i].cells.item(y)){
-            selectcolor(array[i].cells.item(y));
-            selectcolor(array[i+1].cells.item(y));
-            selectcolor(array[i+2].cells.item(y));
-          }
-        }
-      }
-    }
-    i++;
-  }
-}
-
-function Selectperso(perso){
-  var array = document.getElementById("tableau").rows;
-  var longeur = array.length;
-  var i=1;
   var personne = Math.floor(perso);
   var nb = Math.round(perso % 1 *10);
   while(i<longeur){
